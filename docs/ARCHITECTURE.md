@@ -120,6 +120,29 @@ The last category is worth the harness: all three were invisible to unit tests a
 
 Because step 5 uses the same functions a live run uses, the cached numbers cannot drift from the shapes the UI and tests expect. Rebuild with `npm run build:demo`.
 
+## Deployment
+
+Deployed on Vercel at <https://paperguide-roan.vercel.app>: `public/` is served at the root and the `/api/*` routes run as a Node function. Because `public/` and `vendor/` are committed, there is no build step and no dependency install stage — the same property that makes `node server.mjs` work on a clean checkout makes the deployment self-contained.
+
+The deployed routes were verified individually rather than assumed:
+
+| Route | Evidence |
+|---|---|
+| `GET /api/health` | Returns `{"ok":true,...,"seedCourses":6}` on Node v24 |
+| `GET /api/syllabus/index` | All six seeded courses with real modules and COs |
+| `GET /api/syllabus/search?q=UCEST105` | Resolves from the bundled index |
+| `GET /api/syllabus/fetch?url=…tracemonkey.pdf` | 14 pages, 69,396 characters extracted — so `vendor/pdfjs-node/` is present inside the function bundle, which was the main packaging risk |
+| `GET /demo/index.json` | Bundle served |
+
+Two things behave differently once hosted, and both come down to IP reputation rather than code:
+
+* **Search engines.** DuckDuckGo returns HTTP 202 with an anti-bot challenge and no result markup, so it is useless server-side. Bing answers, but with filler for narrow queries. This is why the engine order is Bing-then-DuckDuckGo and why results pass through a relevance filter: a hosted server has to be willing to return nothing.
+* **`/api/syllabus/fetch`.** It inherits the deployment's address. A host that 403s Vercel (w3.org did during testing) produces a `UPSTREAM_STATUS` error naming the status and the URL, which is the correct outcome: the route worked, the upstream refused.
+
+The local proxy for model calls is the one capability that is local-only, because there is no server-side state to route through when the page is not served by our own process. On the hosted build, model calls go browser-direct, so the provider must allow cross-origin requests. The Settings drawer exposes this as an explicit choice rather than leaving it implicit.
+
+The Vercel project's routing configuration lives in the dashboard, not in the repository, so re-creating the project from a bare clone needs those settings repeated. Committing a `vercel.json` would close that gap.
+
 ## Deliberate omissions
 
 * **No streaming tokens.** The brief allows "streaming **or** step-by-step progress"; every LLM call returns JSON, which streams poorly. Progress is a step list with live per-stage detail, which is more legible in a recording.

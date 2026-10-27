@@ -10,6 +10,11 @@ import {
   extractCodes,
   scoreCandidate,
   parseDuckDuckGo,
+  parseBing,
+  decodeBingHref,
+  tokenHits,
+  hasSyllabusSignal,
+  keepWebResult,
   loadSeedIndex,
 } from '../server/syllabus-search.mjs';
 
@@ -186,4 +191,91 @@ test('loadSeedIndex returns an empty index for a directory without the index fil
   // test/fixtures/ exists but holds no ktu-2024-index.json.
   const index = await loadSeedIndex(fileURLToPath(new URL('./fixtures/', import.meta.url)));
   assert.deepEqual(index.courses, []);
+});
+
+/* ------------------------------------------------------------------ Bing */
+
+/** Build a Bing-shaped result page whose redirects encode the given URLs. */
+function bingPage(entries) {
+  const block = ({ title, url, snippet }) => {
+    const encoded = Buffer.from(url).toString('base64url');
+    const href = `https://www.bing.com/ck/a?!&amp;&amp;p=deadbeef&amp;u=a1${encoded}&amp;nt=1`;
+    return `<li class="b_algo"><h2><a href="${href}">${title}</a></h2><div><p class="b_lineclamp">${snippet}</p></div></li>`;
+  };
+  return `<html><body><ol id="b_results">${entries.map(block).join('')}</ol></body></html>`;
+}
+
+test('decodeBingHref unwraps a Bing redirect into the real URL', () => {
+  const real = 'https://ktu.notesundo.in/syllabus/2024/cse/s3';
+  const wrapped = `<a href="https://www.bing.com/ck/a?u=a1${Buffer.from(real).toString('base64url')}&nt=1">`;
+  assert.equal(decodeBingHref(wrapped), real);
+});
+
+test('decodeBingHref passes a plain URL straight through', () => {
+  assert.equal(decodeBingHref('https://www.ktunotes.in/syllabus/'), 'https://www.ktunotes.in/syllabus/');
+});
+
+test('decodeBingHref returns null when it cannot recover a URL', () => {
+  assert.equal(decodeBingHref('https://www.bing.com/ck/a?p=notbase64'), null);
+  assert.equal(decodeBingHref('javascript:void(0)'), null);
+});
+
+test('parseBing reads titles, real URLs and snippets', () => {
+  const html = bingPage([
+    { title: 'KTU S3 CSE Syllabus 2024 Scheme', url: 'https://www.ktunotes.in/ktu-s3-cse-syllabus-2024-scheme/', snippet: 'All subjects with modules and course outcomes.' },
+    { title: 'PCECT302 Solid State Devices', url: 'https://ktu.notesundo.in/syllabus/2024/ece/s3/solid-state-devices', snippet: 'Syllabus PDF.' },
+  ]);
+  const results = parseBing(html);
+  assert.equal(results.length, 2);
+  assert.equal(results[0].url, 'https://www.ktunotes.in/ktu-s3-cse-syllabus-2024-scheme/');
+  assert.match(results[0].title, /Syllabus 2024 Scheme/);
+  assert.match(results[0].snippet, /course outcomes/);
+  assert.equal(results[1].url, 'https://ktu.notesundo.in/syllabus/2024/ece/s3/solid-state-devices');
+});
+
+test('parseBing ignores markup that is not an organic result', () => {
+  assert.deepEqual(parseBing('<html><body><p>No results found.</p></body></html>'), []);
+  assert.deepEqual(parseBing(''), []);
+});
+
+/* ------------------------------------------------- web-result relevance */
+
+test('hasSyllabusSignal recognises syllabus and curriculum pages', () => {
+  assert.ok(hasSyllabusSignal({ title: 'KTU S3 CSE Syllabus', url: 'https://x.test/a' }));
+  assert.ok(hasSyllabusSignal({ title: 'Second year', url: 'https://ktu.edu.in/academics/branchcurriculum/hardcoded-btech' }));
+  assert.ok(hasSyllabusSignal({ title: 'Data Structures question paper 2024', url: 'https://x.test/qp' }));
+  assert.equal(hasSyllabusSignal({ title: 'Solid State Chemistry', url: 'https://www.geeksforgeeks.org/chemistry/solid-state-chemistry/' }), false);
+});
+
+test('keepWebResult drops filler that merely shares a word with the query', () => {
+  const tokens = tokenize('Solid State Devices KTU syllabus');
+  // The real source page, offered by the bundled index, would not go through
+  // this filter, but a mirror page like this must survive it.
+  assert.ok(keepWebResult({ title: 'PCECT302 Solid State Devices Syllabus', url: 'https://ktu.notesundo.in/syllabus/2024/ece/s3/solid-state-devices', score: 0.42 }, tokens));
+  // Search-engine filler that happens to contain the words.
+  assert.equal(
+    keepWebResult({ title: 'Solid | Definition & Facts', url: 'https://www.britannica.com/science/solid-state-of-matter', score: 0.3 }, tokens),
+    false
+  );
+});
+
+test('keepWebResult rejects results that share nothing with the query', () => {
+  const tokens = tokenize('UCEST105');
+  assert.equal(
+    keepWebResult({ title: 'Wireshark Display Filter protocol==TLSV1?', url: 'https://serverfault.com/questions/216814/x', score: 0.05 }, tokens),
+    false
+  );
+});
+
+test('keepWebResult honours the score floor', () => {
+  const tokens = tokenize('Theory of Computation');
+  assert.equal(keepWebResult({ title: 'Theory of Computation Syllabus', url: 'https://x.test/syllabus', score: 0.1 }, tokens), false);
+  assert.ok(keepWebResult({ title: 'Theory of Computation Syllabus', url: 'https://x.test/syllabus', score: 0.5 }, tokens));
+});
+
+test('tokenHits only counts meaningful tokens', () => {
+  const tokens = ['data', 'structures', 'algorithms'];
+  assert.equal(tokenHits({ title: 'Data Structures and Algorithms', url: 'https://x.test/' }, tokens), 3);
+  assert.equal(tokenHits({ title: 'Data', url: 'https://x.test/' }, tokens), 1);
+  assert.equal(tokenHits({ title: 'Unrelated', url: 'https://x.test/' }, tokens), 0);
 });

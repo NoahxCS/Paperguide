@@ -144,11 +144,130 @@ async function ddgSearch(query, { timeoutMs = 18000 } = {}) {
   try {
     const { bytes, contentType } = await fetchWithLimits(endpoint, { timeoutMs, maxBytes: 3 * 1024 * 1024 });
     const text = new TextDecoder('utf-8').decode(bytes);
-    if (!/html/i.test(contentType) && !/<html/i.test(text.slice(0, 400))) return [];
+    if (!/html/i.test(text.slice(0, 400)) && !/html/i.test(contentType)) return [];
     return parseDuckDuckGo(text);
   } catch {
     return []; // search is best-effort; the caller falls back to the seed index
   }
+}
+
+/**
+ * Bing wraps every organic result in a redirect:
+ *   https://www.bing.com/ck/a?...&u=a1<base64url of the real URL>&...
+ * The `u` parameter is base64url-encoded with a literal "a1" prefix.
+ */
+export function decodeBingHref(href) {
+  const html = String(href).replace(/&amp;/g, '&');
+  if (!/(^|\.)bing\.com\/ck\/a/i.test(html)) return /^https?:/i.test(html) ? html : null;
+  const match = /[?&]u=a1([A-Za-z0-9_-]+)/.exec(html);
+  if (!match) return null;
+  try {
+    const base64 = match[1].replace(/-/g, '+').replace(/_/g, '/');
+    const padded = base64 + '='.repeat((4 - (base64.length % 4)) % 4);
+    const decoded = Buffer.from(padded, 'base64').toString('utf8');
+    return /^https?:/i.test(decoded) ? decoded : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Parse a Bing results page into {title, url, snippet}.
+ *
+ * Bing is the primary engine because DuckDuckGo's HTML endpoint answers
+ * server-side requests from datacentres with an anti-bot challenge page
+ * (HTTP 202, no result markup), which makes it useless from a deployed server
+ * even though it works from a browser.
+ */
+export function parseBing(html) {
+  const results = [];
+  const blocks = String(html).split(/<li class="b_algo"/i).slice(1);
+  for (const block of blocks) {
+    const anchor = /<h2[^>]*>\s*<a[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/i.exec(block);
+    if (!anchor) continue;
+    const url = decodeBingHref(anchor[1]);
+    if (!url) continue;
+    const paragraph = /<p[^>]*>([\s\S]*?)<\/p>/i.exec(block);
+    results.push({
+      title: htmlToText(anchor[2]).slice(0, 240),
+      url,
+      snippet: paragraph ? htmlToText(paragraph[1]).slice(0, 320) : '',
+    });
+  }
+  return results;
+}
+
+async function bingSearch(query, { timeoutMs = 18000 } = {}) {
+  // No `count` parameter: a plain query string is what Bing answers reliably,
+  // and extra parameters appear to push it toward a degraded filler page.
+  const endpoint = `https://www.bing.com/search?q=${encodeURIComponent(query)}&setlang=en`;
+  try {
+    const { bytes } = await fetchWithLimits(endpoint, { timeoutMs, maxBytes: 4 * 1024 * 1024 });
+    const text = new TextDecoder('utf-8').decode(bytes);
+    if (!/b_algo/i.test(text)) return [];
+    return parseBing(text);
+  } catch {
+    return [];
+  }
+}
+
+/** Engines tried in order. The first one that answers wins for that query. */
+const SEARCH_ENGINES = [
+  { name: 'bing', run: bingSearch },
+  { name: 'duckduckgo-html', run: ddgSearch },
+];
+
+/**
+ * Run one query across the engines, stopping at the first that returns results.
+ * Sequential on purpose: firing several queries at one engine at once is what
+ * triggers its bot detection, and a degraded page is worse than a slow one.
+ * @returns {Promise<{results:object[], engine:string|null}>}
+ */
+async function webSearch(query, { timeoutMs = 18000 } = {}) {
+  for (const engine of SEARCH_ENGINES) {
+    const results = await engine.run(query, { timeoutMs });
+    if (results.length) return { results, engine: engine.name };
+  }
+  return { results: [], engine: null };
+}
+
+/**
+ * How many of the query's meaningful tokens appear in a candidate's title+url.
+ * Used to reject the unrelated filler a search engine returns when it has no
+ * real match, which would otherwise reach the teacher as a nonsense option.
+ */
+export function tokenHits(candidate, tokens) {
+  const hay = `${candidate.title ?? ''} ${candidate.url ?? ''}`.toLowerCase();
+  return tokens.filter((t) => t.length > 2 && hay.includes(t)).length;
+}
+
+/**
+ * A web result is only offered when it is plausibly about the course asked for.
+ *
+ * Search engines answer a query they have no real match for with filler that
+ * merely shares words, so a bare token test is not enough. A result must either
+ * look like a syllabus document, or match several query tokens convincingly.
+ * Bundled-index and official-listing hits skip this check entirely.
+ */
+export const WEB_RELEVANCE_FLOOR = 0.2;
+
+const SYLLABUS_SIGNAL = /syllabus|curriculum|scheme|question\s*paper|model\s*paper|course\s*outcome|\bqp\b/i;
+
+export function hasSyllabusSignal(candidate) {
+  return SYLLABUS_SIGNAL.test(`${candidate.title ?? ''} ${candidate.url ?? ''}`);
+}
+
+export function keepWebResult(candidate, tokens) {
+  const score = candidate.score ?? 0;
+  if (score < WEB_RELEVANCE_FLOOR) return false;
+  const hits = tokenHits(candidate, tokens);
+  if (tokens.length && hits === 0) return false;
+  if (hasSyllabusSignal(candidate)) return true;
+  // No syllabus wording anywhere: only keep it if it matches most of what the
+  // teacher typed and still scores well. This is what removes pages that merely
+  // contain the words ("Solid" / "state of matter" for a Solid State Devices
+  // query) without removing real course pages.
+  return hits >= Math.min(tokens.length, 3) && score >= 0.35;
 }
 
 function matchSeedIndex(index, tokens, codes) {
@@ -221,15 +340,30 @@ export async function searchSyllabus({ query, index, limit = 12, remote = true }
   else warnings.push('The bundled course index is empty, so only live search was used.');
 
   if (remote) {
-    const queries = [
-      `${query} KTU 2024 scheme syllabus pdf`,
-      `site:ktu.edu.in ${query} syllabus`,
-      `${query} KTU syllabus modules course outcomes 2024`,
-    ];
-    const batches = await Promise.all(queries.map((q) => ddgSearch(q)));
-    sourcesTried.push('duckduckgo-html');
-    const remoteHits = batches.flat().map((r) => ({ ...r, provenance: 'web-search', snippet: r.snippet }));
-    if (!remoteHits.length) warnings.push('Web search returned nothing (offline or rate-limited). Upload the syllabus PDF instead.');
+    const queries = [`${query} KTU syllabus`, `${query} KTU 2024 scheme syllabus pdf`];
+    const batches = [];
+    for (const q of queries) {
+      batches.push(await webSearch(q));
+    }
+    const enginesUsed = [...new Set(batches.map((b) => b.engine).filter(Boolean))];
+    for (const engine of enginesUsed) sourcesTried.push(engine);
+    if (!enginesUsed.length) sourcesTried.push('web-search(unavailable)');
+
+    const fetched = batches.flatMap((b) => b.results).map((r) => ({ ...r, provenance: 'web-search' }));
+    const scored = fetched.map((r) => ({ ...r, score: scoreCandidate(r, tokens, codes) }));
+    const remoteHits = scored.filter((r) => keepWebResult(r, tokens));
+    const dropped = scored.length - remoteHits.length;
+
+    if (!remoteHits.length) {
+      warnings.push(
+        (fetched.length
+          ? `Web search returned ${fetched.length} result(s) but none were about "${query}", so they were discarded. `
+          : 'Live web search returned nothing, so only the bundled index and any official listing were used. ') +
+          'Search engines often refuse or degrade requests from a hosted server. Paste a syllabus URL below, or upload the syllabus PDF.'
+      );
+    } else if (dropped > 0) {
+      warnings.push(`Web search returned ${fetched.length} result(s); ${dropped} were off-topic and are not shown.`);
+    }
     collected.push(...remoteHits);
 
     const official = await crawlOfficialListings(tokens, codes);

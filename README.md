@@ -4,9 +4,17 @@ An exam-paper quality checker for teachers at colleges affiliated to APJ Abdul K
 
 Output is delivered in chat only. There is no login, no saved history, no database and no disk writes.
 
+**Live:** <https://paperguide-roan.vercel.app> — no install, no terminal. Open **Demo mode** to walk the whole workflow on a real paper without entering a single key.
+
 ---
 
 ## Quick start
+
+### Option 1 — use the hosted deployment
+
+Open <https://paperguide-roan.vercel.app>. Everything except your own API keys works there; demo mode needs nothing at all. Your keys are entered in that browser tab and are never stored anywhere.
+
+### Option 2 — run it locally
 
 Requires **Node 20+**. There are no npm dependencies to install.
 
@@ -23,6 +31,8 @@ node server.mjs --port 9000 --host 127.0.0.1
 
 The bundled [pdf.js](https://mozilla.github.io/pdf.js/) build is committed under `vendor/` and `public/vendor/`, so nothing is fetched at install time.
 
+Running locally is worth it if you want the local proxy for model calls (see [Settings](#settings)), if you would rather your paper never leave your machine except to OCR.space, or if a hosted search engine is refusing requests from a datacentre address.
+
 ### What works with no API key at all
 
 | Feature | Needs a key? |
@@ -36,6 +46,8 @@ The bundled [pdf.js](https://mozilla.github.io/pdf.js/) build is committed under
 | Reading free text, segmenting a paper, the analysis itself | Yes — an LLM endpoint |
 
 So you can record a complete demo, and review the whole confirmation workflow, before you enter a single key.
+
+Two caveats on that table: live *web* search is unreliable from a hosted server, and the local proxy for model calls only exists when you run the server yourself. Both are covered under [Honest limits](#honest-limits). Everything else behaves identically on <https://paperguide-roan.vercel.app>.
 
 ---
 
@@ -142,14 +154,18 @@ Taken from real 2024-scheme documents, not from memory. Details and citations ar
 * **Credits** are printed as `Teaching Hours/Week (L: T: P: R)` plus a separate single `Credits` value — the tuple is L-T-P-R, not L-T-P-C.
 * The CO table has two columns, `Course Outcome` and `Bloom's Knowledge Level (KL)`, with `CO1`/`CO2` embedded in the first column. Both `KL3` and `K3` forms are normalised to `K3`.
 
-Syllabus lookup deliberately does not depend on `ktu.edu.in`: the official Academics area is a client-rendered app that serves no syllabus links, and the apex host fails TLS. Paperguide uses a bundled index of real courses, then web search, then KTU-affiliated mirrors, and always shows provenance and a match score. A pasted URL and a PDF upload are both first-class fallbacks.
+Syllabus lookup deliberately does not depend on `ktu.edu.in`: the official Academics area is a client-rendered app that serves no syllabus links, and the apex host fails TLS. Paperguide uses a bundled index of real courses first, then web search, then KTU-affiliated mirrors, and always shows provenance and a match score. A pasted URL and a PDF upload are both first-class paths.
+
+Web search runs **Bing first, DuckDuckGo second**, because DuckDuckGo's HTML endpoint answers server-side requests with an anti-bot challenge (HTTP 202 and no result markup) — it works from your laptop but not from a hosted deployment. Results are then filtered hard: a web hit must either look like a syllabus document or match most of what you typed. Search engines answer a query they have no real match for with filler that merely shares words, and showing you "Solid State Chemistry" as a candidate for a Solid State Devices syllabus is worse than showing nothing.
+
+That means web search is a best-effort supplement, not the dependable path. For the six seeded courses the bundled index answers instantly and offline. For anything else, paste the syllabus URL or upload the PDF.
 
 ---
 
 ## Verification
 
 ```bash
-npm test                  # 133 unit tests, one process
+npm test                  # 143 unit tests, one process
 npm run test:node         # same suites via `node --test` (per-file processes)
 ```
 
@@ -170,6 +186,29 @@ node scripts/check-ocr.mjs path/to/paper.jpg    # needs the server running
 ```
 
 Posts a paper image through Paperguide's own `/api/ocr` proxy to the real OCR.space service and reports how many known phrases came back. With no argument it uses `ocr.space`'s public test key, which is heavily rate-limited — a rate-limit reply is reported as inconclusive rather than as a code failure. This path was verified end to end: a synthetic 1700×2300 photographed paper returned `OCRExitCode=1` with 6 of 7 probe phrases read correctly (the miss was a line my own test renderer clipped off the page edge).
+
+### Search engine check
+
+```bash
+node scripts/check-search.mjs "UCEST105" "KTU 2024 scheme syllabus pdf"
+node scripts/check-search.mjs --local "Solid State Devices KTU syllabus"   # via the running server
+```
+
+Prints which engines answered, the candidates with their provenance and score, and a direct probe of Bing and DuckDuckGo so you can see the anti-bot behaviour for yourself. Useful when a syllabus lookup comes back empty: it tells you whether the engine refused, or whether results arrived and were filtered as off-topic.
+
+### The deployed build
+
+The live deployment runs the same API layer as the local server — it is not a static export. Verified against <https://paperguide-roan.vercel.app>:
+
+| Route | Result |
+|---|---|
+| `GET /api/health` | `{"ok":true,...,"seedCourses":6}` on Node v24 |
+| `GET /api/syllabus/index` | All six real 2024-scheme courses with modules and COs |
+| `GET /api/syllabus/search?q=UCEST105` | Resolves from the bundled index, with the web-search warning |
+| `GET /api/syllabus/fetch?url=…pdf` | A 14-page PDF returned 69,396 characters of extracted text, so the vendored `vendor/pdfjs-node/` build is present in the function bundle |
+| `GET /demo/index.json` | Demo bundle served |
+
+Two notes for anyone re-deploying. The Vercel project's routing configuration lives in the Vercel dashboard, not in this repository, so a fresh project needs the same settings — say the word and I will commit a `vercel.json` to make it reproducible from the repo alone. And `/api/syllabus/fetch` inherits the deployed IP's reputation: a site that returns 403 to Vercel (w3.org did during testing) will 403 here too, and the error says so plainly.
 
 ---
 
@@ -196,7 +235,7 @@ server/
   documents.mjs         fetch a syllabus URL, extract PDF/HTML text
   pdf-text.mjs          server-side PDF text extraction (vendored pdf.js)
   html-text.mjs         HTML to readable text, entity decoding, link extraction
-  syllabus-search.mjs   bundled index + web search + official listing, ranked
+  syllabus-search.mjs   bundled index + web search (Bing, then DuckDuckGo) + official listing, ranked and relevance-filtered
   llm-proxy.mjs         chat-completions forwarding with credential redaction
   ocr-proxy.mjs         OCR.space pass-through proxy
 public/
@@ -220,15 +259,32 @@ public/
     schemas.js          the JSON contracts
   ui/
     dom.js  cards.js  report.js  settings.js
-  selftest.html/.js     browser self-test
-  flowtest.html/.js     end-to-end flow test
+  selftest.html/.js     browser self-test (18 checks)
+  flowtest.html/.js     end-to-end flow test (20 checks)
   preview.html          report preview
 data/ktu-2024-index.json    six real 2024-scheme courses with modules and COs
 demo/sample-paper-raw.md    two real KTU papers, transcribed verbatim
 docs/                       KTU scheme + paper-anatomy research, architecture
 scripts/build-demo.mjs      regenerates the demo bundle
-test/                       133 unit tests
+scripts/check-ocr.mjs       live OCR.space round-trip check
+scripts/check-search.mjs    search-engine diagnostic
+test/                       143 unit tests
 ```
+
+## Deployment
+
+It is deployed on Vercel at <https://paperguide-roan.vercel.app>, serving `public/` at the root and running `server.mjs`'s routes as a Node function. `public/` and `vendor/` are both committed, so the deployment is self-contained: there is no build step and no dependency install stage.
+
+What differs from a local run:
+
+| | Local | Hosted |
+|---|---|---|
+| Model calls | Local proxy available, so every provider works | Browser-direct only, so the provider must allow cross-origin calls |
+| Syllabus web search | Usually answered | Frequently refused or degraded by the search engine; the bundled index and URL/PDF paths carry it |
+| OCR | Proxy or direct | Browser-direct to OCR.space |
+| Paper data | Never leaves the machine except to OCR.space and your model | Same, but the local server is not in the path |
+
+The privacy guarantee is unchanged either way: no storage APIs, no database, no logs, and keys held in one browser tab.
 
 ---
 
@@ -236,7 +292,9 @@ test/                       133 unit tests
 
 * **Mode B is an estimate, not measurement.** Bands come from a model's reading of the question wording and cognitive demand. They are risk flags. The bundled demo's bands come from a documented rubric over Bloom's level, marks and a persona time factor — labelled as such in the report.
 * **Syllabus retrieval is best-effort.** No official per-course PDF URL on `ktu.edu.in` could be confirmed; the bundled index holds six courses, and everything else relies on search and mirrors. Upload is the reliable path, which is why it is a first-class button rather than a fallback of last resort.
+* **Live web search is the weakest link, especially hosted.** DuckDuckGo bot-blocks server-side requests outright, and Bing answers from a datacentre IP with filler for the queries that matter most — a bare course code like `UCEST105` returns twenty unrelated pages, all of which are now discarded rather than shown. Search contributes real value for broad queries (`KTU 2024 scheme syllabus pdf` returns KTU's own curriculum page) and almost nothing for narrow ones. The bundled index and the URL/upload paths are what actually work; `scripts/check-search.mjs` shows exactly what each engine returned.
 * **The bundled index is a seed, not a catalogue.** Adding courses is a matter of extending `data/ktu-2024-index.json`; the shape is documented by example.
 * **OCR quality sets the ceiling.** Marks lost in OCR become inferred marks, and the segmentation card says which ones were inferred. Fixing the text before confirming is the single highest-value habit.
 * **`node --test` may fail in a sandbox** that blocks piped stdio (EPERM on spawn). Use `npm test`, which runs the same suites in one process.
 * **The r.jina.ai text reader** is used only as a last resort for a scanned syllabus PDF that has no text layer, and the report says when it was used.
+* **The Vercel project configuration is not in this repository.** The deployment works, but re-creating it from a bare clone would need the same dashboard settings.

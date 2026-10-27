@@ -10,7 +10,8 @@
     "test": "node test/run-all.mjs",
     "test:node": "node --test test/",
     "build:demo": "node scripts/build-demo.mjs",
-    "check:ocr": "node scripts/check-ocr.mjs"
+    "check:ocr": "node scripts/check-ocr.mjs",
+    "check:search": "node scripts/check-search.mjs"
   },
   "engines": {
     "node": ">=20.0.0"
