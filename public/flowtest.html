@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Paperguide &mdash; flow test</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      body { overflow: auto; }
+      .wrap { max-width: 980px; margin: 0 auto; padding: 26px 20px 60px; }
+      .result { display: grid; grid-template-columns: 58px 1fr; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; }
+      .result .status { font-weight: 700; font-family: var(--mono); font-size: 12px; }
+      .pass .status { color: var(--ok); }
+      .fail .status { color: var(--danger); }
+      .detail { color: var(--text-muted); font-size: 12.5px; }
+      #summary { font-size: 19px; font-weight: 650; margin: 14px 0 20px; }
+      #stage { width: 100%; height: 520px; border: 1px solid var(--border); border-radius: 12px; background: var(--bg); }
+      .row { display: flex; gap: 8px; align-items: center; margin: 12px 0; }
+      input[type="text"] { flex: 1; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1 style="font-size: 22px; margin: 0 0 4px">Paperguide flow test</h1>
+      <p class="muted" style="margin: 0">
+        Drives the real app inside an iframe through the whole demo flow with synthetic clicks, checking the phase machine,
+        the confirmation gate at each step, and that a report actually reaches the chat.
+      </p>
+      <div id="summary">Running&hellip;</div>
+      <div id="results"></div>
+      <iframe id="stage" src="/" title="Paperguide under test"></iframe>
+    </div>
+    <script type="module" src="/flowtest.js"></script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+# Normalise text on commit. Every source file in this repo is already LF-only,
+# so this only prevents a future editor from introducing mixed endings.
+* text=auto
+
+# The vendored pdf.js builds are third-party code. Committing them keeps the
+# project installable with no npm step, but they should not count as this
+# project's own source, so keep them out of GitHub's language statistics.
+public/vendor/** linguist-vendored
+vendor/**          linguist-vendored
+
+# The demo bundle is produced by scripts/build-demo.mjs, not written by hand.
+# Marking it generated keeps it out of diffs reviewers do not need to read.
+public/demo/**/*.json linguist-generated
+
+# Binary assets
+*.ttf    binary
+*.otf    binary
+*.woff   binary
+*.woff2  binary
+*.bcmap  binary
+*.pdf    binary
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.webp   binary
+*.gif    binary
+*.ico    binary

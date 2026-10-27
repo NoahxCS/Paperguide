@@ -1,0 +1,1359 @@
+{
+  "mode": "persona",
+  "generatedAt": 1768469400000,
+  "promptVersion": "1.2.0",
+  "model": "cached demo bundle",
+  "scope": {
+    "courseCode": "UCEST105",
+    "courseTitle": "Algorithmic Thinking with Python",
+    "examLabel": "First Semester B.Tech Degree Regular Examination December 2024 (2024 Scheme)",
+    "totalMarks": 60,
+    "durationMinutes": 150,
+    "modulesInScope": [
+      1,
+      2,
+      3
+    ],
+    "moduleScopeNotes": "The teacher declared Modules 1-3 examinable and Module 4 out of scope, so this demo can show the out-of-scope and uncovered-topic checks working on a real paper.",
+    "paperStructure": {
+      "source": "teacher",
+      "note": "Default for KTU 2024-scheme theory courses (from the ESE block of real syllabi and real papers: UCEST105, GAMAT101, PCCST302/303, PCECT302). Max. Marks 60, Duration 2 hours 30 minutes. (Confirmed by the teacher.)",
+      "parts": [
+        {
+          "name": "Part A",
+          "instructions": "Answer all questions. Each question carries 3 marks.",
+          "questionCount": 8,
+          "marksPerQuestion": 3,
+          "totalMarks": 24,
+          "choice": "none",
+          "coversModules": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "questionsPerModule": 2
+        },
+        {
+          "name": "Part B",
+          "instructions": "Answer any one full question from each module, each question carries 9 marks.",
+          "questionCount": 8,
+          "marksPerQuestion": 9,
+          "totalMarks": 36,
+          "choice": "either-or",
+          "coversModules": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "questionsPerModule": 2
+        }
+      ]
+    },
+    "classNote": "This batch is weak at recursion and at reading pseudocode for boundary conditions.",
+    "unresolved": []
+  },
+  "syllabusMeta": {
+    "courseCode": "UCEST105",
+    "courseTitle": "Algorithmic Thinking with Python",
+    "sourceUrl": "https://ktu.notesundo.in/api/download/pmh2Mu24",
+    "sourceKind": "bundled-index"
+  },
+  "personas": [
+    {
+      "id": "weak",
+      "name": "Weak",
+      "tagline": "Marks-driven, selective study, fragile under unfamiliar wording",
+      "accent": "#f87171",
+      "studyHabits": "Revises from class notes in the last two days, mostly by reading rather than solving. Skips derivations, long proofs and anything that looked hard in class. Memorises definitions, formulae and standard procedures as text.",
+      "strengths": "Reproduces definitions and labelled diagrams when the wording matches the notes. Solves formula-recitation and one-step numerical problems. Picks up marks on Part A short answers that ask for a statement or a list.",
+      "errorTypes": "Confuses similar terms and symbols. Drops units, limits and boundary conditions. Misreads a multi-part question and answers only the first part. Arithmetic slips part-way through a solution and does not notice. Cannot start a question whose framing is new.",
+      "timeManagement": "Over-invests in the first question they can start, then runs out of time. Frequently leaves the last part of the paper untouched. Almost never re-checks an answer.",
+      "readingCarefulness": "Skims. Misses qualifiers such as \"hence\", \"in terms of\", \"with justification\", \"at least\". Treats sub-parts as optional.",
+      "calibration": "Expect partial credit where the method is standard and explicitly named in the question. Expect near-zero on analyse/evaluate questions that need a choice or a justification, and on any question that depends on reading a figure carefully.",
+      "expectedPercent": [
+        0,
+        45
+      ]
+    },
+    {
+      "id": "average",
+      "name": "Average",
+      "tagline": "Covers everything at textbook depth; solid on routine problems",
+      "accent": "#fbbf24",
+      "studyHabits": "Works through previous-year papers and the standard exercises. Covers all modules, but at the depth the lecture notes and the prescribed textbook go to. Practises the taught method for each problem type.",
+      "strengths": "Completes routine apply-level problems correctly using the taught procedure. Strong on 3-mark Part A answers. Handles sub-parts that are each a standard exercise.",
+      "errorTypes": "Stalls when a problem deviates from the taught procedure or combines two topics. Loses marks on the justification and interpretation steps of analyse-level questions. Partial solutions where a proof or derivation is expected.",
+      "timeManagement": "Broadly realistic: allocates roughly by marks, but the fourth module is usually rushed. Leaves 10-15 minutes at the end for a quick review.",
+      "readingCarefulness": "Reads each question once, fully, in calm conditions. Under time pressure misreads \"derive\" as \"state\", or misses a stated simplifying assumption.",
+      "calibration": "Expect most of the marks on routine apply-level questions, with a clean drop-off on questions that need a judgement, a comparison, or an unfamiliar combination. Expect them to attempt everything but to leave method gaps.",
+      "expectedPercent": [
+        35,
+        70
+      ]
+    },
+    {
+      "id": "strong",
+      "name": "Strong",
+      "tagline": "Syllabus plus references; comfortable with unseen framings",
+      "accent": "#34d399",
+      "studyHabits": "Covers the syllabus and dips into the reference books. Practices unseen problems, derivation chains and past papers across years. Links topics across modules.",
+      "strengths": "Handles multi-step and analyse/evaluate questions. Recovers from a wrong start and re-routes mid-answer. Can attempt an unfamiliar framing by mapping it to a known technique. Writes justifications and conclusions unprompted.",
+      "errorTypes": "Occasional carelessness on very easy 3-mark Part A questions. Tends to over-elaborate, which can cost time. May over-engineer a question that only wanted a short answer.",
+      "timeManagement": "Allocates strictly by marks. Finishes with time to spare and uses it to re-check units and edge cases.",
+      "readingCarefulness": "Reads carefully, notices constraints, specific instructions and \"hence\" chains. Checks units, signs and limiting cases.",
+      "calibration": "Expect near-full marks on apply-level questions, with the remaining loss concentrated in careless Part A slips, missing a required justification, or an ambiguous question where their interpretation differs from the examiner’s.",
+      "expectedPercent": [
+        65,
+        100
+      ]
+    }
+  ],
+  "classNote": "This batch is weak at recursion and at reading pseudocode for boundary conditions.",
+  "perQuestion": [
+    {
+      "questionId": "A1",
+      "label": "1",
+      "part": "Part A",
+      "module": "",
+      "marks": 3,
+      "choiceGroup": "",
+      "shareOfGroup": 1,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 10,
+          "bandHighPercent": 40,
+          "likelyScorePercent": 25,
+          "expectedMarks": 0.75,
+          "pitfall": "Describes solving the puzzle in general terms with no systematic search, and never states what makes a placement \"wrong\".",
+          "trigger": "trial and error method",
+          "triggerQuote": "trial and error method",
+          "timeMinutes": 7.7,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 35,
+          "bandHighPercent": 65,
+          "likelyScorePercent": 50,
+          "expectedMarks": 1.5,
+          "pitfall": "Lists a reasonable order of attempts but does not connect it to a stopping condition, so the answer reads as a story.",
+          "trigger": "trial and error",
+          "triggerQuote": "trial and error",
+          "timeMinutes": 5,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 60,
+          "bandHighPercent": 90,
+          "likelyScorePercent": 75,
+          "expectedMarks": 2.25,
+          "pitfall": "Gives the systematic search but writes more than the 3 marks need and may omit the explicit criterion for discarding a piece.",
+          "trigger": "trial and error method",
+          "triggerQuote": "trial and error method",
+          "timeMinutes": 3.9,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 50,
+        "band": "high",
+        "note": ""
+      },
+      "averageMidpoint": 50,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "A2",
+      "label": "2",
+      "part": "Part A",
+      "module": "",
+      "marks": 3,
+      "choiceGroup": "",
+      "shareOfGroup": 1,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 5,
+          "bandHighPercent": 40,
+          "likelyScorePercent": 22.5,
+          "expectedMarks": 0.675,
+          "pitfall": "Writes isdigit() on the whole string without noticing the embedded space, so the snippet prints False and no reason is given.",
+          "trigger": "\"1234 5\"",
+          "triggerQuote": "\"1234 5\"",
+          "timeMinutes": 7.7,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 30,
+          "bandHighPercent": 62,
+          "likelyScorePercent": 46,
+          "expectedMarks": 1.3800000000000001,
+          "pitfall": "Notices the space and strips it, but does not say what the function returns for the original string.",
+          "trigger": "check if it is numeric",
+          "triggerQuote": "check if it is numeric",
+          "timeMinutes": 5,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 42,
+          "bandHighPercent": 66,
+          "likelyScorePercent": 54,
+          "expectedMarks": 1.62,
+          "pitfall": "Handles both readings and states the printed result, losing marks only if the method name is left out.",
+          "trigger": "numeric",
+          "triggerQuote": "numeric",
+          "timeMinutes": 3.9,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 31.5,
+        "band": "medium",
+        "note": ""
+      },
+      "averageMidpoint": 46,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "A3",
+      "label": "3",
+      "part": "Part A",
+      "module": "",
+      "marks": 3,
+      "choiceGroup": "",
+      "shareOfGroup": 1,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 5,
+          "bandHighPercent": 35,
+          "likelyScorePercent": 20,
+          "expectedMarks": 0.6000000000000001,
+          "pitfall": "Draws a flowchart with the right symbols but no initialisation and no loop exit, so it cannot terminate.",
+          "trigger": "generate the first 'n' numbers",
+          "triggerQuote": "generate the first 'n' numbers",
+          "timeMinutes": 7.7,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 40,
+          "bandHighPercent": 70,
+          "likelyScorePercent": 55,
+          "expectedMarks": 1.6500000000000001,
+          "pitfall": "Produces a terminating flowchart but starts the sequence at 1, 1 instead of 0, 1.",
+          "trigger": "Fibonacci sequence",
+          "triggerQuote": "Fibonacci sequence",
+          "timeMinutes": 5,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 70,
+          "bandHighPercent": 95,
+          "likelyScorePercent": 82.5,
+          "expectedMarks": 2.4749999999999996,
+          "pitfall": "Complete and correctly initialised; may lose a mark for omitting the n = 1 decision.",
+          "trigger": "first 'n' numbers",
+          "triggerQuote": "first 'n' numbers",
+          "timeMinutes": 3.9,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 62.5,
+        "band": "high",
+        "note": ""
+      },
+      "averageMidpoint": 55,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "A4",
+      "label": "4",
+      "part": "Part A",
+      "module": "",
+      "marks": 3,
+      "choiceGroup": "",
+      "shareOfGroup": 1,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 15,
+          "bandHighPercent": 50,
+          "likelyScorePercent": 32.5,
+          "expectedMarks": 0.9750000000000001,
+          "pitfall": "Reverses the digits with string slicing but forgets the comparison step, giving a program that does not decide anything.",
+          "trigger": "Palindrome or not",
+          "triggerQuote": "Palindrome or not",
+          "timeMinutes": 7.7,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 42,
+          "bandHighPercent": 72,
+          "likelyScorePercent": 57,
+          "expectedMarks": 1.71,
+          "pitfall": "Correct string-based reversal and comparison, but no handling of negative input or of single-digit numbers.",
+          "trigger": "input integer",
+          "triggerQuote": "input integer",
+          "timeMinutes": 5,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 55,
+          "bandHighPercent": 78,
+          "likelyScorePercent": 66.5,
+          "expectedMarks": 1.995,
+          "pitfall": "Correct, and usually adds the negative-number edge case unprompted.",
+          "trigger": "Palindrome",
+          "triggerQuote": "Palindrome",
+          "timeMinutes": 3.9,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 34,
+        "band": "medium",
+        "note": ""
+      },
+      "averageMidpoint": 57,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "A5",
+      "label": "5",
+      "part": "Part A",
+      "module": "",
+      "marks": 3,
+      "choiceGroup": "",
+      "shareOfGroup": 1,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 10,
+          "bandHighPercent": 45,
+          "likelyScorePercent": 27.5,
+          "expectedMarks": 0.8250000000000001,
+          "pitfall": "Answers (i) only, or gives the values without noticing that the step is negative in the first loop.",
+          "trigger": "range(-10,-20,-2)",
+          "triggerQuote": "range(-10,-20,-2)",
+          "timeMinutes": 7.7,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 40,
+          "bandHighPercent": 75,
+          "likelyScorePercent": 57.5,
+          "expectedMarks": 1.7249999999999999,
+          "pitfall": "Gets (i) and (ii) right but mis-evaluates the exponentiation order in (iii).",
+          "trigger": "2*3**2**2",
+          "triggerQuote": "2*3**2**2",
+          "timeMinutes": 5,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 70,
+          "bandHighPercent": 95,
+          "likelyScorePercent": 82.5,
+          "expectedMarks": 2.4749999999999996,
+          "pitfall": "All three correct, including right-to-left exponentiation, in well under the time available.",
+          "trigger": "2*3**2**2",
+          "triggerQuote": "2*3**2**2",
+          "timeMinutes": 3.9,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 55,
+        "band": "high",
+        "note": ""
+      },
+      "averageMidpoint": 57.5,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "A6",
+      "label": "6",
+      "part": "Part A",
+      "module": "",
+      "marks": 3,
+      "choiceGroup": "",
+      "shareOfGroup": 1,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 10,
+          "bandHighPercent": 40,
+          "likelyScorePercent": 25,
+          "expectedMarks": 0.75,
+          "pitfall": "Loops correctly but tests x % 2 == 1 for odd instead of == 0 for even, inverting the result.",
+          "trigger": "sum of even numbers",
+          "triggerQuote": "sum of even numbers",
+          "timeMinutes": 7.7,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 40,
+          "bandHighPercent": 75,
+          "likelyScorePercent": 57.5,
+          "expectedMarks": 1.7249999999999999,
+          "pitfall": "Correct sum, but assumes the numbers are already in a list rather than reading N of them.",
+          "trigger": "N given numbers",
+          "triggerQuote": "N given numbers",
+          "timeMinutes": 5,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 75,
+          "bandHighPercent": 95,
+          "likelyScorePercent": 85,
+          "expectedMarks": 2.55,
+          "pitfall": "Correct and typically also handles negatives and zero.",
+          "trigger": "even numbers",
+          "triggerQuote": "even numbers",
+          "timeMinutes": 3.9,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 60,
+        "band": "high",
+        "note": ""
+      },
+      "averageMidpoint": 57.5,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "A7",
+      "label": "7",
+      "part": "Part A",
+      "module": "",
+      "marks": 3,
+      "choiceGroup": "",
+      "shareOfGroup": 1,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 60,
+          "bandHighPercent": 95,
+          "likelyScorePercent": 77.5,
+          "expectedMarks": 2.325,
+          "pitfall": "Gives a single vague sentence about randomness being \"sometimes faster\".",
+          "trigger": "motivation for using a randomized approach",
+          "triggerQuote": "motivation for using a randomized approach",
+          "timeMinutes": 7.7,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 75,
+          "bandHighPercent": 100,
+          "likelyScorePercent": 87.5,
+          "expectedMarks": 2.625,
+          "pitfall": "Gives one defensible reason but no example problem.",
+          "trigger": "randomized approach",
+          "triggerQuote": "randomized approach",
+          "timeMinutes": 5,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 90,
+          "bandHighPercent": 100,
+          "likelyScorePercent": 95,
+          "expectedMarks": 2.8499999999999996,
+          "pitfall": "Gives two reasons with an example, and may add unnecessary detail on Monte Carlo methods.",
+          "trigger": "motivation",
+          "triggerQuote": "motivation",
+          "timeMinutes": 3.9,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 17.5,
+        "band": "low",
+        "note": "Easy for all three: it does not separate them."
+      },
+      "averageMidpoint": 87.5,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "A8",
+      "label": "8",
+      "part": "Part A",
+      "module": "",
+      "marks": 3,
+      "choiceGroup": "",
+      "shareOfGroup": 1,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 0,
+          "bandHighPercent": 25,
+          "likelyScorePercent": 12.5,
+          "expectedMarks": 0.375,
+          "pitfall": "States that all 10,000 passwords should be tried but gives no loop structure or termination condition.",
+          "trigger": "recovering the 4-digit numeric password",
+          "triggerQuote": "recovering the 4-digit numeric password",
+          "timeMinutes": 7.7,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 25,
+          "bandHighPercent": 55,
+          "likelyScorePercent": 40,
+          "expectedMarks": 1.2000000000000002,
+          "pitfall": "Gives a nested-loop brute force up to 9999 but mishandles leading zeros, so 0000 to 0999 are skipped.",
+          "trigger": "4-digit numeric password",
+          "triggerQuote": "4-digit numeric password",
+          "timeMinutes": 5,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 55,
+          "bandHighPercent": 85,
+          "likelyScorePercent": 70,
+          "expectedMarks": 2.0999999999999996,
+          "pitfall": "Correct exhaustive search from 0000 to 9999 with the attempt bound stated; may over-explain.",
+          "trigger": "recovering the 4-digit",
+          "triggerQuote": "recovering the 4-digit",
+          "timeMinutes": 3.9,
+          "confidence": "medium",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 57.5,
+        "band": "high",
+        "note": ""
+      },
+      "averageMidpoint": 40,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "B9",
+      "label": "9",
+      "part": "Part B",
+      "module": "Module -1",
+      "marks": 9,
+      "choiceGroup": "B-m1",
+      "shareOfGroup": 0.5,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 15,
+          "bandHighPercent": 45,
+          "likelyScorePercent": 30,
+          "expectedMarks": 2.6999999999999997,
+          "pitfall": "Describes Sudoku rules rather than the backtracking strategy, and does not attempt part b) at all.",
+          "trigger": "backtracking strategy can be applied",
+          "triggerQuote": "backtracking strategy can be applied",
+          "timeMinutes": 20.6,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 45,
+          "bandHighPercent": 75,
+          "likelyScorePercent": 60,
+          "expectedMarks": 5.3999999999999995,
+          "pitfall": "Explains backtracking acceptably but gives a generic \"choose the best restaurant\" answer for heuristics without defining a heuristic function.",
+          "trigger": "heuristics approach",
+          "triggerQuote": "heuristics approach",
+          "timeMinutes": 13.4,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 50,
+          "bandHighPercent": 75,
+          "likelyScorePercent": 62.5,
+          "expectedMarks": 5.625,
+          "pitfall": "Both parts answered with a concrete heuristic (rating, distance); may spend too long on the Sudoku example relative to 5 marks.",
+          "trigger": "heuristics approach",
+          "triggerQuote": "heuristics approach",
+          "timeMinutes": 10.3,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 32.5,
+        "band": "medium",
+        "note": ""
+      },
+      "averageMidpoint": 60,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "B10",
+      "label": "10",
+      "part": "Part B",
+      "module": "Module -1",
+      "marks": 9,
+      "choiceGroup": "B-m1",
+      "shareOfGroup": 0.5,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 5,
+          "bandHighPercent": 35,
+          "likelyScorePercent": 20,
+          "expectedMarks": 1.8,
+          "pitfall": "Writes a paragraph about campus software with no mention of a goal state or an operator.",
+          "trigger": "Means-Ends Analysis",
+          "triggerQuote": "Means-Ends Analysis",
+          "timeMinutes": 20.6,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 40,
+          "bandHighPercent": 70,
+          "likelyScorePercent": 55,
+          "expectedMarks": 4.95,
+          "pitfall": "Names the current state and goal state but not the difference-reduction operators, which is the core of the technique.",
+          "trigger": "apply Means-Ends Analysis",
+          "triggerQuote": "apply Means-Ends Analysis",
+          "timeMinutes": 13.4,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 70,
+          "bandHighPercent": 95,
+          "likelyScorePercent": 82.5,
+          "expectedMarks": 7.425,
+          "pitfall": "States current state, goal state and operators; loses marks only if the difference reduced by each operator is left implicit.",
+          "trigger": "Means-Ends Analysis",
+          "triggerQuote": "Means-Ends Analysis",
+          "timeMinutes": 10.3,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 62.5,
+        "band": "high",
+        "note": ""
+      },
+      "averageMidpoint": 55,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "B11",
+      "label": "11",
+      "part": "Part B",
+      "module": "Module -2",
+      "marks": 9,
+      "choiceGroup": "B-m2",
+      "shareOfGroup": 0.5,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 0,
+          "bandHighPercent": 12,
+          "likelyScorePercent": 6,
+          "expectedMarks": 0.54,
+          "pitfall": "Writes a nested if-else that covers most bands but silently drops the promotion rule, and leaves part b) incomplete.",
+          "trigger": "next multiple of 10",
+          "triggerQuote": "next multiple of 10",
+          "timeMinutes": 20.6,
+          "confidence": "high",
+          "attemptsIt": false,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 3,
+          "bandHighPercent": 20,
+          "likelyScorePercent": 11.5,
+          "expectedMarks": 1.0350000000000001,
+          "pitfall": "Correct bands and a working promotion rule, but does not notice that 60 and 70 fall in two bands as printed, so the boundary behaviour is undefined.",
+          "trigger": "Marks 60-70: Grade D",
+          "triggerQuote": "Marks 60-70: Grade D",
+          "timeMinutes": 13.4,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 10,
+          "bandHighPercent": 25,
+          "likelyScorePercent": 17.5,
+          "expectedMarks": 1.575,
+          "pitfall": "Handles the overlapping bands by choosing an interpretation and stating it, and completes both parts inside the time.",
+          "trigger": "less that 3",
+          "triggerQuote": "less that 3",
+          "timeMinutes": 10.3,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 11.5,
+        "band": "low",
+        "note": "Hard for all three: it does not separate them."
+      },
+      "averageMidpoint": 11.5,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "B12",
+      "label": "12",
+      "part": "Part B",
+      "module": "Module -2",
+      "marks": 9,
+      "choiceGroup": "B-m2",
+      "shareOfGroup": 0.5,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 15,
+          "bandHighPercent": 50,
+          "likelyScorePercent": 32.5,
+          "expectedMarks": 2.9250000000000003,
+          "pitfall": "Writes pseudocode that initialises largest and smallest both to 0, so a list of positive numbers returns 0 as the smallest.",
+          "trigger": "largest and smallest numbers",
+          "triggerQuote": "largest and smallest numbers",
+          "timeMinutes": 20.6,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 42,
+          "bandHighPercent": 72,
+          "likelyScorePercent": 57,
+          "expectedMarks": 5.13,
+          "pitfall": "Correct initialisation from the first element, but does not address the efficiency claim at all.",
+          "trigger": "efficient for real-world applications",
+          "triggerQuote": "efficient for real-world applications",
+          "timeMinutes": 13.4,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 55,
+          "bandHighPercent": 78,
+          "likelyScorePercent": 66.5,
+          "expectedMarks": 5.985,
+          "pitfall": "Correct single-pass pseudocode with the comparison count stated.",
+          "trigger": "efficient for real-world",
+          "triggerQuote": "efficient for real-world",
+          "timeMinutes": 10.3,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 34,
+        "band": "medium",
+        "note": ""
+      },
+      "averageMidpoint": 57,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "B13",
+      "label": "13",
+      "part": "Part B",
+      "module": "Module -3",
+      "marks": 9,
+      "choiceGroup": "B-m3",
+      "shareOfGroup": 0.5,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 5,
+          "bandHighPercent": 35,
+          "likelyScorePercent": 20,
+          "expectedMarks": 1.8,
+          "pitfall": "Writes an iterative Fibonacci loop despite the instruction to use recursion, or omits the base case.",
+          "trigger": "use recursion to solve it",
+          "triggerQuote": "use recursion to solve it",
+          "timeMinutes": 20.6,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 40,
+          "bandHighPercent": 70,
+          "likelyScorePercent": 55,
+          "expectedMarks": 4.95,
+          "pitfall": "Correct recursive Fibonacci but no base-case discussion, and the triangle test uses exact equality on floating-point values.",
+          "trigger": "right triangle",
+          "triggerQuote": "right triangle",
+          "timeMinutes": 13.4,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 70,
+          "bandHighPercent": 95,
+          "likelyScorePercent": 82.5,
+          "expectedMarks": 7.425,
+          "pitfall": "Correct recursion with base cases, and uses a tolerance in the triangle test; may not state the tolerance value.",
+          "trigger": "right triangle",
+          "triggerQuote": "right triangle",
+          "timeMinutes": 10.3,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 62.5,
+        "band": "high",
+        "note": ""
+      },
+      "averageMidpoint": 55,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "B14",
+      "label": "14",
+      "part": "Part B",
+      "module": "Module -3",
+      "marks": 9,
+      "choiceGroup": "B-m3",
+      "shareOfGroup": 0.5,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 0,
+          "bandHighPercent": 25,
+          "likelyScorePercent": 12.5,
+          "expectedMarks": 1.125,
+          "pitfall": "Attempts the LCM with a loop but ignores the GCD relationship that the question requires, or leaves part b) blank.",
+          "trigger": "relationship between GCD and LCM",
+          "triggerQuote": "relationship between GCD and LCM",
+          "timeMinutes": 20.6,
+          "confidence": "high",
+          "attemptsIt": false,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 30,
+          "bandHighPercent": 60,
+          "likelyScorePercent": 45,
+          "expectedMarks": 4.05,
+          "pitfall": "Uses gcd from the math module and the product relationship correctly, but the character reordering in b) is written as three separate prints rather than one word.",
+          "trigger": "capital letters to appear first",
+          "triggerQuote": "capital letters to appear first",
+          "timeMinutes": 13.4,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 60,
+          "bandHighPercent": 85,
+          "likelyScorePercent": 72.5,
+          "expectedMarks": 6.5249999999999995,
+          "pitfall": "Both parts correct, including stable ordering within each character group; may lose a mark for not stating the complexity.",
+          "trigger": "single word",
+          "triggerQuote": "single word",
+          "timeMinutes": 10.3,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 60,
+        "band": "high",
+        "note": ""
+      },
+      "averageMidpoint": 45,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "B15",
+      "label": "15",
+      "part": "Part B",
+      "module": "Module -4",
+      "marks": 9,
+      "choiceGroup": "B-m4",
+      "shareOfGroup": 0.5,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 0,
+          "bandHighPercent": 15,
+          "likelyScorePercent": 7.5,
+          "expectedMarks": 0.6749999999999999,
+          "pitfall": "Sorts the array and takes the two smallest, which contradicts the Divide and Conquer requirement, or leaves part a) as a plan with no example.",
+          "trigger": "Divide and Conquer approach",
+          "triggerQuote": "Divide and Conquer approach",
+          "timeMinutes": 20.6,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 15,
+          "bandHighPercent": 40,
+          "likelyScorePercent": 27.5,
+          "expectedMarks": 2.475,
+          "pitfall": "Describes splitting and merging correctly but the example is trivial and the comparison with part b) is a list of one-line differences.",
+          "trigger": "sum of the two smallest rates",
+          "triggerQuote": "sum of the two smallest rates",
+          "timeMinutes": 13.4,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 40,
+          "bandHighPercent": 70,
+          "likelyScorePercent": 55,
+          "expectedMarks": 4.95,
+          "pitfall": "Correct divide-and-conquer with a worked example on the given data; may under-spend on part b) which is only 3 marks.",
+          "trigger": "Divide and Conquer",
+          "triggerQuote": "Divide and Conquer",
+          "timeMinutes": 10.3,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 47.5,
+        "band": "high",
+        "note": ""
+      },
+      "averageMidpoint": 27.5,
+      "source": "model",
+      "warnings": []
+    },
+    {
+      "questionId": "B16",
+      "label": "16",
+      "part": "Part B",
+      "module": "Module -4",
+      "marks": 9,
+      "choiceGroup": "B-m4",
+      "shareOfGroup": 0.5,
+      "personas": {
+        "weak": {
+          "persona": "weak",
+          "bandLowPercent": 0,
+          "bandHighPercent": 20,
+          "likelyScorePercent": 10,
+          "expectedMarks": 0.9,
+          "pitfall": "Defines memoization and tabulation but confuses which one is top-down, and does not attempt the greedy part.",
+          "trigger": "memoization and tabulation",
+          "triggerQuote": "memoization and tabulation",
+          "timeMinutes": 20.6,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "average": {
+          "persona": "average",
+          "bandLowPercent": 20,
+          "bandHighPercent": 50,
+          "likelyScorePercent": 35,
+          "expectedMarks": 3.15,
+          "pitfall": "Correct definitions, but the greedy scheduling answer sorts descending and takes the longest tasks first, which is the wrong greedy choice.",
+          "trigger": "maximum number of tasks",
+          "triggerQuote": "maximum number of tasks",
+          "timeMinutes": 13.4,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        },
+        "strong": {
+          "persona": "strong",
+          "bandLowPercent": 45,
+          "bandHighPercent": 80,
+          "likelyScorePercent": 62.5,
+          "expectedMarks": 5.625,
+          "pitfall": "Correct on both, with the exchange argument for sorting ascending; may not have time to write the reasoning out fully.",
+          "trigger": "maximum number of tasks",
+          "triggerQuote": "maximum number of tasks",
+          "timeMinutes": 10.3,
+          "confidence": "high",
+          "attemptsIt": true,
+          "missing": false
+        }
+      },
+      "separation": {
+        "points": 52.5,
+        "band": "high",
+        "note": ""
+      },
+      "averageMidpoint": 35,
+      "source": "model",
+      "warnings": []
+    }
+  ],
+  "byPersona": [
+    {
+      "persona": "weak",
+      "name": "Weak",
+      "expectedMarks": 13.5,
+      "expectedPercent": 22.5,
+      "definitionBand": [
+        0,
+        45
+      ],
+      "timeMinutes": 144,
+      "attemptedQuestions": 11,
+      "questionCount": 16
+    },
+    {
+      "persona": "average",
+      "name": "Average",
+      "expectedMarks": 29.1,
+      "expectedPercent": 48.5,
+      "definitionBand": [
+        35,
+        70
+      ],
+      "timeMinutes": 94,
+      "attemptedQuestions": 12,
+      "questionCount": 16
+    },
+    {
+      "persona": "strong",
+      "name": "Strong",
+      "expectedMarks": 40.9,
+      "expectedPercent": 68.1,
+      "definitionBand": [
+        65,
+        100
+      ],
+      "timeMinutes": 72,
+      "attemptedQuestions": 12,
+      "questionCount": 16
+    }
+  ],
+  "examMax": 60,
+  "timeFeasibility": {
+    "durationMinutes": 150,
+    "perPersona": [
+      {
+        "persona": "weak",
+        "minutes": 144,
+        "verdict": "tight"
+      },
+      {
+        "persona": "average",
+        "minutes": 94,
+        "verdict": "comfortable"
+      },
+      {
+        "persona": "strong",
+        "minutes": 72,
+        "verdict": "comfortable"
+      }
+    ],
+    "verdict": "tight",
+    "margin": 6,
+    "basis": "Sum of per-question time estimates. Either/or pairs are shared between their two options, since a student answers only one.",
+    "modelVerdict": "tight",
+    "note": "With the stated class note applied, the weak persona is the binding constraint: the sum of their per-question times is 144 minutes against a 150-minute paper."
+  },
+  "separation": {
+    "separators": [
+      {
+        "questionId": "A1",
+        "label": "1",
+        "points": 50,
+        "why": "Weak and strong land 50 points apart."
+      },
+      {
+        "questionId": "A3",
+        "label": "3",
+        "points": 62.5,
+        "why": "Weak and strong land 62.5 points apart."
+      },
+      {
+        "questionId": "A5",
+        "label": "5",
+        "points": 55,
+        "why": "Weak and strong land 55 points apart."
+      },
+      {
+        "questionId": "A6",
+        "label": "6",
+        "points": 60,
+        "why": "Weak and strong land 60 points apart."
+      },
+      {
+        "questionId": "A8",
+        "label": "8",
+        "points": 57.5,
+        "why": "Weak and strong land 57.5 points apart."
+      },
+      {
+        "questionId": "B10",
+        "label": "10",
+        "points": 62.5,
+        "why": "Weak and strong land 62.5 points apart."
+      },
+      {
+        "questionId": "B13",
+        "label": "13",
+        "points": 62.5,
+        "why": "Weak and strong land 62.5 points apart."
+      },
+      {
+        "questionId": "B14",
+        "label": "14",
+        "points": 60,
+        "why": "Weak and strong land 60 points apart."
+      },
+      {
+        "questionId": "B15",
+        "label": "15",
+        "points": 47.5,
+        "why": "Weak and strong land 47.5 points apart."
+      },
+      {
+        "questionId": "B16",
+        "label": "16",
+        "points": 52.5,
+        "why": "Weak and strong land 52.5 points apart."
+      }
+    ],
+    "nonSeparators": [
+      {
+        "questionId": "A7",
+        "label": "7",
+        "points": 17.5,
+        "why": "Easy for all three: it does not separate them."
+      },
+      {
+        "questionId": "B11",
+        "label": "11",
+        "points": 11.5,
+        "why": "Hard for all three: it does not separate them."
+      }
+    ],
+    "highCount": 10,
+    "lowCount": 2
+  },
+  "overallSpread": [
+    {
+      "persona": "weak",
+      "expectedPercentLow": 18,
+      "expectedPercentHigh": 34,
+      "rationale": "Scores come almost entirely from Part A and from the standard-method parts of B10 and B13; the Module 4 questions are unanswerable, which alone costs 30 printed marks of the paper."
+    },
+    {
+      "persona": "average",
+      "expectedPercentLow": 42,
+      "expectedPercentHigh": 58,
+      "rationale": "Handles the Part A short answers and the routine pseudocode, but loses the justification and interpretation marks on B11 a), B12 a) and B14."
+    },
+    {
+      "persona": "strong",
+      "expectedPercentLow": 68,
+      "expectedPercentHigh": 84,
+      "rationale": "Completes everything except the ambiguous questions, where their interpretation may differ from the examiner’s, and loses careless marks on the 3-mark Part A items."
+    }
+  ],
+  "rewritePriority": [
+    {
+      "questionId": "B11",
+      "label": "11",
+      "priority": "high",
+      "why": "The printed grade bands overlap, so two correct pseudocode answers can grade the same mark differently. This is the single biggest marking risk on the paper.",
+      "suggestedChange": "Replace the bands with non-overlapping ranges and state the behaviour at exactly 50 and 90."
+    },
+    {
+      "questionId": "A2",
+      "label": "2",
+      "priority": "high",
+      "why": "The embedded space in the sample input makes \"numeric\" genuinely ambiguous, and a correct answer can be marked wrong.",
+      "suggestedChange": "Say explicitly whether the whole string or each token is being tested."
+    },
+    {
+      "questionId": "A8",
+      "label": "8",
+      "priority": "medium",
+      "why": "Asks for password recovery with no stated constraint on the search space or attempt limit, so weak candidates write an unbounded search and strong candidates write a bound nobody asked for.",
+      "suggestedChange": "State that a check function exists and ask for the maximum number of calls."
+    },
+    {
+      "questionId": "A5",
+      "label": "5",
+      "priority": "medium",
+      "why": "Three separate traces for 3 marks makes the time cost of this question disproportionate to its weight.",
+      "suggestedChange": "Either raise the marks or reduce to two traces."
+    },
+    {
+      "questionId": "B16",
+      "label": "16",
+      "priority": "low",
+      "why": "The greedy scheduling part does not say whether tasks may be reordered, and the two readings have different answers.",
+      "suggestedChange": "State whether reordering is permitted."
+    }
+  ],
+  "summary": "The paper behaves predictably for the average and strong personas but not for the weak one, and the gap is largely structural rather than cognitive: the Module 4 questions are unanswerable under the declared scope, so the weak persona's ceiling is set by the scope rather than by difficulty. Question 11 a) is the clearest marking hazard. The 150-minute budget is workable for average and strong candidates and tight for weak candidates.",
+  "modelSeparators": [
+    {
+      "questionId": "A1",
+      "separation": "high",
+      "why": "Weak and strong land 50 points apart."
+    },
+    {
+      "questionId": "A3",
+      "separation": "high",
+      "why": "Weak and strong land 62.5 points apart."
+    },
+    {
+      "questionId": "A5",
+      "separation": "high",
+      "why": "Weak and strong land 55 points apart."
+    },
+    {
+      "questionId": "A6",
+      "separation": "high",
+      "why": "Weak and strong land 60 points apart."
+    },
+    {
+      "questionId": "A8",
+      "separation": "high",
+      "why": "Weak and strong land 57.5 points apart."
+    },
+    {
+      "questionId": "B10",
+      "separation": "high",
+      "why": "Weak and strong land 62.5 points apart."
+    },
+    {
+      "questionId": "B13",
+      "separation": "high",
+      "why": "Weak and strong land 62.5 points apart."
+    },
+    {
+      "questionId": "B14",
+      "separation": "high",
+      "why": "Weak and strong land 60 points apart."
+    },
+    {
+      "questionId": "B15",
+      "separation": "high",
+      "why": "Weak and strong land 47.5 points apart."
+    },
+    {
+      "questionId": "B16",
+      "separation": "high",
+      "why": "Weak and strong land 52.5 points apart."
+    }
+  ],
+  "stats": {
+    "llmCalls": 0,
+    "attempts": 0,
+    "repairs": 0,
+    "note": "Cached demo bundle: no model call was made."
+  },
+  "warnings": [
+    "Cached demo bundle. Bands come from a documented rubric over the question’s assessed Bloom level and marks, not from a model run.",
+    "All values are risk flags and relative difficulty estimates, not measured results."
+  ]
+}

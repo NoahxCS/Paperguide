@@ -1,0 +1,29 @@
+{
+  "papers": [
+    {
+      "id": "UCEST105",
+      "title": "Algorithmic Thinking with Python",
+      "courseCode": "UCEST105",
+      "scheme": "KTU 2024",
+      "semester": 1,
+      "examLabel": "First Semester B.Tech Degree Regular Examination December 2024 (2024 Scheme)",
+      "scenario": "Modules 1-3 in scope, Module 4 deliberately excluded",
+      "source": "Real UCEST105 December 2024 paper (2024 scheme), transcribed verbatim in demo/sample-paper-raw.md; syllabus from data/ktu-2024-index.json",
+      "files": {
+        "paperText": "UCEST105/paper.txt",
+        "scope": "UCEST105/scope.json",
+        "syllabus": "UCEST105/syllabus.json",
+        "segmentation": "UCEST105/segmentation.json",
+        "analysis": "UCEST105/analysis.json",
+        "persona": "UCEST105/persona.json"
+      },
+      "highlights": [
+        "Out-of-scope questions 7, 8, 15, 16 all assess Module 4, which the teacher declared out of scope.",
+        "31 in-scope topics earn zero marks, including recursion on the call stack, modularization and Numpy arrays.",
+        "Module 1=25%, 2=25%, 3=25% - the answerable mark share per module.",
+        "Question 11 a) prints overlapping grade bands, flagged as a marking hazard with a concrete rewrite.",
+        "Persona timing: weak 144m (tight), average 94m (comfortable), strong 72m (comfortable) against a 150-minute paper."
+      ]
+    }
+  ]
+}

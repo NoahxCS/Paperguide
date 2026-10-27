@@ -1,0 +1,1810 @@
+{
+  "mode": "analysis",
+  "generatedAt": 1768469400000,
+  "promptVersion": "1.2.0",
+  "model": "cached demo bundle",
+  "scope": {
+    "courseCode": "UCEST105",
+    "courseTitle": "Algorithmic Thinking with Python",
+    "examLabel": "First Semester B.Tech Degree Regular Examination December 2024 (2024 Scheme)",
+    "totalMarks": 60,
+    "durationMinutes": 150,
+    "modulesInScope": [
+      1,
+      2,
+      3
+    ],
+    "moduleScopeNotes": "The teacher declared Modules 1-3 examinable and Module 4 out of scope, so this demo can show the out-of-scope and uncovered-topic checks working on a real paper.",
+    "paperStructure": {
+      "source": "teacher",
+      "note": "Default for KTU 2024-scheme theory courses (from the ESE block of real syllabi and real papers: UCEST105, GAMAT101, PCCST302/303, PCECT302). Max. Marks 60, Duration 2 hours 30 minutes. (Confirmed by the teacher.)",
+      "parts": [
+        {
+          "name": "Part A",
+          "instructions": "Answer all questions. Each question carries 3 marks.",
+          "questionCount": 8,
+          "marksPerQuestion": 3,
+          "totalMarks": 24,
+          "choice": "none",
+          "coversModules": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "questionsPerModule": 2
+        },
+        {
+          "name": "Part B",
+          "instructions": "Answer any one full question from each module, each question carries 9 marks.",
+          "questionCount": 8,
+          "marksPerQuestion": 9,
+          "totalMarks": 36,
+          "choice": "either-or",
+          "coversModules": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "questionsPerModule": 2
+        }
+      ]
+    },
+    "classNote": "This batch is weak at recursion and at reading pseudocode for boundary conditions.",
+    "unresolved": []
+  },
+  "syllabusMeta": {
+    "courseCode": "UCEST105",
+    "courseTitle": "Algorithmic Thinking with Python",
+    "sourceUrl": "https://ktu.notesundo.in/api/download/pmh2Mu24",
+    "sourceKind": "bundled-index",
+    "moduleCount": 3,
+    "coCount": 4
+  },
+  "coverage": {
+    "questions": [
+      {
+        "id": "A1",
+        "label": "1",
+        "part": "Part A",
+        "marks": 3,
+        "printedMarks": 3,
+        "countedMarks": 3,
+        "modules": [
+          1
+        ],
+        "topicIds": [
+          "1.4"
+        ],
+        "cos": [
+          "CO1"
+        ],
+        "assessedBloom": "K2",
+        "inScope": true,
+        "confidence": "high",
+        "why": "Printed as Part A question 1 with CO tag CO1."
+      },
+      {
+        "id": "A2",
+        "label": "2",
+        "part": "Part A",
+        "marks": 3,
+        "printedMarks": 3,
+        "countedMarks": 3,
+        "modules": [
+          1
+        ],
+        "topicIds": [
+          "1.18"
+        ],
+        "cos": [
+          "CO1"
+        ],
+        "assessedBloom": "K3",
+        "inScope": true,
+        "confidence": "high",
+        "why": "Printed as Part A question 2 with CO tag CO1."
+      },
+      {
+        "id": "A3",
+        "label": "3",
+        "part": "Part A",
+        "marks": 3,
+        "printedMarks": 3,
+        "countedMarks": 3,
+        "modules": [
+          2
+        ],
+        "topicIds": [
+          "2.6"
+        ],
+        "cos": [
+          "CO2"
+        ],
+        "assessedBloom": "K3",
+        "inScope": true,
+        "confidence": "high",
+        "why": "Printed as Part A question 3 with CO tag CO2."
+      },
+      {
+        "id": "A4",
+        "label": "4",
+        "part": "Part A",
+        "marks": 3,
+        "printedMarks": 3,
+        "countedMarks": 3,
+        "modules": [
+          2
+        ],
+        "topicIds": [
+          "2.1",
+          "2.5"
+        ],
+        "cos": [
+          "CO2"
+        ],
+        "assessedBloom": "K3",
+        "inScope": true,
+        "confidence": "high",
+        "why": "Printed as Part A question 4 with CO tag CO2."
+      },
+      {
+        "id": "A5",
+        "label": "5",
+        "part": "Part A",
+        "marks": 3,
+        "printedMarks": 3,
+        "countedMarks": 3,
+        "modules": [
+          3
+        ],
+        "topicIds": [
+          "3.1"
+        ],
+        "cos": [
+          "CO3"
+        ],
+        "assessedBloom": "K2",
+        "inScope": true,
+        "confidence": "high",
+        "why": "Printed as Part A question 5 with CO tag CO3."
+      },
+      {
+        "id": "A6",
+        "label": "6",
+        "part": "Part A",
+        "marks": 3,
+        "printedMarks": 3,
+        "countedMarks": 3,
+        "modules": [
+          3
+        ],
+        "topicIds": [
+          "3.1"
+        ],
+        "cos": [
+          "CO3"
+        ],
+        "assessedBloom": "K3",
+        "inScope": true,
+        "confidence": "high",
+        "why": "Printed as Part A question 6 with CO tag CO3."
+      },
+      {
+        "id": "A7",
+        "label": "7",
+        "part": "Part A",
+        "marks": 3,
+        "printedMarks": 3,
+        "countedMarks": 3,
+        "modules": [
+          4
+        ],
+        "topicIds": [
+          "4.11"
+        ],
+        "cos": [
+          "CO4"
+        ],
+        "assessedBloom": "K2",
+        "inScope": false,
+        "confidence": "high",
+        "why": "Printed as Part A question 7 with CO tag CO4."
+      },
+      {
+        "id": "A8",
+        "label": "8",
+        "part": "Part A",
+        "marks": 3,
+        "printedMarks": 3,
+        "countedMarks": 3,
+        "modules": [
+          4
+        ],
+        "topicIds": [
+          "4.1"
+        ],
+        "cos": [
+          "CO4"
+        ],
+        "assessedBloom": "K3",
+        "inScope": false,
+        "confidence": "high",
+        "why": "Printed as Part A question 8 with CO tag CO4."
+      },
+      {
+        "id": "B9",
+        "label": "9",
+        "part": "Part B",
+        "marks": 9,
+        "printedMarks": 9,
+        "countedMarks": 9,
+        "modules": [
+          1
+        ],
+        "topicIds": [
+          "1.7",
+          "1.5"
+        ],
+        "cos": [
+          "CO1"
+        ],
+        "assessedBloom": "K2",
+        "inScope": true,
+        "confidence": "high",
+        "why": "Printed as Module -1 question 9 with CO tag CO1."
+      },
+      {
+        "id": "B10",
+        "label": "10",
+        "part": "Part B",
+        "marks": 9,
+        "printedMarks": 9,
+        "countedMarks": 0,
+        "modules": [
+          1
+        ],
+        "topicIds": [
+          "1.6",
+          "1.19"
+        ],
+        "cos": [
+          "CO1"
+        ],
+        "assessedBloom": "K3",
+        "inScope": true,
+        "confidence": "high",
+        "why": "Printed as Module -1 question 10 with CO tag CO1."
+      },
+      {
+        "id": "B11",
+        "label": "11",
+        "part": "Part B",
+        "marks": 9,
+        "printedMarks": 9,
+        "countedMarks": 9,
+        "modules": [
+          2
+        ],
+        "topicIds": [
+          "2.4",
+          "2.5"
+        ],
+        "cos": [
+          "CO2"
+        ],
+        "assessedBloom": "K3",
+        "inScope": true,
+        "confidence": "high",
+        "why": "Printed as Module -2 question 11 with CO tag CO2."
+      },
+      {
+        "id": "B12",
+        "label": "12",
+        "part": "Part B",
+        "marks": 9,
+        "printedMarks": 9,
+        "countedMarks": 0,
+        "modules": [
+          2
+        ],
+        "topicIds": [
+          "2.5"
+        ],
+        "cos": [
+          "CO2"
+        ],
+        "assessedBloom": "K3",
+        "inScope": true,
+        "confidence": "high",
+        "why": "Printed as Module -2 question 12 with CO tag CO2."
+      },
+      {
+        "id": "B13",
+        "label": "13",
+        "part": "Part B",
+        "marks": 9,
+        "printedMarks": 9,
+        "countedMarks": 9,
+        "modules": [
+          3
+        ],
+        "topicIds": [
+          "3.11",
+          "3.16"
+        ],
+        "cos": [
+          "CO3"
+        ],
+        "assessedBloom": "K3",
+        "inScope": true,
+        "confidence": "high",
+        "why": "Printed as Module -3 question 13 with CO tag CO3."
+      },
+      {
+        "id": "B14",
+        "label": "14",
+        "part": "Part B",
+        "marks": 9,
+        "printedMarks": 9,
+        "countedMarks": 0,
+        "modules": [
+          3
+        ],
+        "topicIds": [
+          "3.16",
+          "3.2"
+        ],
+        "cos": [
+          "CO3"
+        ],
+        "assessedBloom": "K3",
+        "inScope": true,
+        "confidence": "high",
+        "why": "Printed as Module -3 question 14 with CO tag CO3."
+      },
+      {
+        "id": "B15",
+        "label": "15",
+        "part": "Part B",
+        "marks": 9,
+        "printedMarks": 9,
+        "countedMarks": 9,
+        "modules": [
+          4
+        ],
+        "topicIds": [
+          "4.2",
+          "4.10"
+        ],
+        "cos": [
+          "CO4"
+        ],
+        "assessedBloom": "K4",
+        "inScope": false,
+        "confidence": "high",
+        "why": "Printed as Module -4 question 15 with CO tag CO4."
+      },
+      {
+        "id": "B16",
+        "label": "16",
+        "part": "Part B",
+        "marks": 9,
+        "printedMarks": 9,
+        "countedMarks": 0,
+        "modules": [
+          4
+        ],
+        "topicIds": [
+          "4.5",
+          "4.7"
+        ],
+        "cos": [
+          "CO4"
+        ],
+        "assessedBloom": "K4",
+        "inScope": false,
+        "confidence": "high",
+        "why": "Printed as Module -4 question 16 with CO tag CO4."
+      }
+    ],
+    "byModule": [
+      {
+        "module": 1,
+        "title": "Problem-Solving Strategies; The Problem-Solving Process; Essentials of Python Programming",
+        "inScope": true,
+        "printedMarks": 24,
+        "answerableMarks": 15,
+        "percent": 25,
+        "expectedPercent": 33.3,
+        "delta": -8.3,
+        "questionIds": [
+          "A1",
+          "A2",
+          "B9",
+          "B10"
+        ],
+        "coveredTopicIds": [
+          "1.4",
+          "1.18",
+          "1.7",
+          "1.5",
+          "1.6",
+          "1.19"
+        ],
+        "uncoveredTopicIds": [
+          "1.1",
+          "1.2",
+          "1.3",
+          "1.8",
+          "1.9",
+          "1.10",
+          "1.11",
+          "1.12",
+          "1.13",
+          "1.14",
+          "1.15",
+          "1.16",
+          "1.17",
+          "1.20",
+          "1.21"
+        ],
+        "topicCount": 21
+      },
+      {
+        "module": 2,
+        "title": "Algorithm and Pseudocode Representation; Flowcharts",
+        "inScope": true,
+        "printedMarks": 24,
+        "answerableMarks": 15,
+        "percent": 25,
+        "expectedPercent": 33.3,
+        "delta": -8.3,
+        "questionIds": [
+          "A3",
+          "A4",
+          "B11",
+          "B12"
+        ],
+        "coveredTopicIds": [
+          "2.6",
+          "2.1",
+          "2.5",
+          "2.4"
+        ],
+        "uncoveredTopicIds": [
+          "2.2",
+          "2.3",
+          "2.7",
+          "2.8"
+        ],
+        "topicCount": 8
+      },
+      {
+        "module": 3,
+        "title": "Selection and Iteration Using Python; Decomposition and Modularization; Recursion",
+        "inScope": true,
+        "printedMarks": 24,
+        "answerableMarks": 15,
+        "percent": 25,
+        "expectedPercent": 33.3,
+        "delta": -8.3,
+        "questionIds": [
+          "A5",
+          "A6",
+          "B13",
+          "B14"
+        ],
+        "coveredTopicIds": [
+          "3.1",
+          "3.11",
+          "3.16",
+          "3.2"
+        ],
+        "uncoveredTopicIds": [
+          "3.3",
+          "3.4",
+          "3.5",
+          "3.6",
+          "3.7",
+          "3.8",
+          "3.9",
+          "3.10",
+          "3.12",
+          "3.13",
+          "3.14",
+          "3.15"
+        ],
+        "topicCount": 16
+      }
+    ],
+    "byCo": [
+      {
+        "co": "CO1",
+        "statement": "Utilize computing as a model for solving real-world problems.",
+        "bloom": "K2",
+        "printedMarks": 24,
+        "answerableMarks": 15,
+        "percent": 25,
+        "questionIds": [
+          "A1",
+          "A2",
+          "B9",
+          "B10"
+        ]
+      },
+      {
+        "co": "CO2",
+        "statement": "Articulate a problem before attempting to solve it and prepare a clear and accurate model to represent the problem.",
+        "bloom": "K3",
+        "printedMarks": 24,
+        "answerableMarks": 15,
+        "percent": 25,
+        "questionIds": [
+          "A3",
+          "A4",
+          "B11",
+          "B12"
+        ]
+      },
+      {
+        "co": "CO3",
+        "statement": "Utilize effective algorithms to solve the formulated models and translate algorithms into executable programs.",
+        "bloom": "K3",
+        "printedMarks": 24,
+        "answerableMarks": 15,
+        "percent": 25,
+        "questionIds": [
+          "A5",
+          "A6",
+          "B13",
+          "B14"
+        ]
+      },
+      {
+        "co": "CO4",
+        "statement": "Interpret the problem-solving strategies, a systematic approach to solving computational problems, and essential Python programming skills",
+        "bloom": "K3",
+        "printedMarks": 24,
+        "answerableMarks": 15,
+        "percent": 25,
+        "questionIds": [
+          "A7",
+          "A8",
+          "B15",
+          "B16"
+        ]
+      }
+    ],
+    "uncoveredTopics": [
+      {
+        "module": 1,
+        "topicId": "1.1",
+        "topic": "PROBLEM-SOLVING STRATEGIES"
+      },
+      {
+        "module": 1,
+        "topicId": "1.2",
+        "topic": "Problem-solving strategies defined"
+      },
+      {
+        "module": 1,
+        "topicId": "1.3",
+        "topic": "Importance of understanding multiple problem-solving strategies"
+      },
+      {
+        "module": 1,
+        "topicId": "1.8",
+        "topic": "THE PROBLEM-SOLVING PROCESS"
+      },
+      {
+        "module": 1,
+        "topicId": "1.9",
+        "topic": "Computer as a model of computation"
+      },
+      {
+        "module": 1,
+        "topicId": "1.10",
+        "topic": "Understanding the problem"
+      },
+      {
+        "module": 1,
+        "topicId": "1.11",
+        "topic": "Formulating a model"
+      },
+      {
+        "module": 1,
+        "topicId": "1.12",
+        "topic": "Developing an algorithm"
+      },
+      {
+        "module": 1,
+        "topicId": "1.13",
+        "topic": "Writing the program"
+      },
+      {
+        "module": 1,
+        "topicId": "1.14",
+        "topic": "Testing the program"
+      },
+      {
+        "module": 1,
+        "topicId": "1.15",
+        "topic": "Evaluating the solution"
+      },
+      {
+        "module": 1,
+        "topicId": "1.16",
+        "topic": "ESSENTIALS OF PYTHON PROGRAMMING"
+      },
+      {
+        "module": 1,
+        "topicId": "1.17",
+        "topic": "Creating and using variables in Python"
+      },
+      {
+        "module": 1,
+        "topicId": "1.20",
+        "topic": "Using the Python Standard Library for handling basic I/O - print, input"
+      },
+      {
+        "module": 1,
+        "topicId": "1.21",
+        "topic": "Python operators and their precedence"
+      },
+      {
+        "module": 2,
+        "topicId": "2.2",
+        "topic": "Meaning and Definition of Pseudocode"
+      },
+      {
+        "module": 2,
+        "topicId": "2.3",
+        "topic": "Reasons for using pseudocode"
+      },
+      {
+        "module": 2,
+        "topicId": "2.7",
+        "topic": "Symbols used in creating a Flowchart - start and end, arithmetic calculations, input/output operation, decision (selection), module name (call), for loop (Hexagon), flow-lines, on-page connector, off-page connector"
+      },
+      {
+        "module": 2,
+        "topicId": "2.8",
+        "topic": "Only for visualizing the control flow of Algorithms; the use of tools like RAPTOR is suggested"
+      },
+      {
+        "module": 3,
+        "topicId": "3.3",
+        "topic": "Creating and using Arrays in Python (using Numpy library)"
+      },
+      {
+        "module": 3,
+        "topicId": "3.4",
+        "topic": "DECOMPOSITION AND MODULARIZATION"
+      },
+      {
+        "module": 3,
+        "topicId": "3.5",
+        "topic": "Problem decomposition as a strategy for solving complex problems"
+      },
+      {
+        "module": 3,
+        "topicId": "3.6",
+        "topic": "Modularization"
+      },
+      {
+        "module": 3,
+        "topicId": "3.7",
+        "topic": "Motivation for modularization"
+      },
+      {
+        "module": 3,
+        "topicId": "3.8",
+        "topic": "Defining and using functions in Python"
+      },
+      {
+        "module": 3,
+        "topicId": "3.9",
+        "topic": "Functions with multiple return values"
+      },
+      {
+        "module": 3,
+        "topicId": "3.10",
+        "topic": "RECURSION"
+      },
+      {
+        "module": 3,
+        "topicId": "3.12",
+        "topic": "Reasons for using Recursion"
+      },
+      {
+        "module": 3,
+        "topicId": "3.13",
+        "topic": "The Call Stack"
+      },
+      {
+        "module": 3,
+        "topicId": "3.14",
+        "topic": "Recursion and the Stack"
+      },
+      {
+        "module": 3,
+        "topicId": "3.15",
+        "topic": "Avoiding Circularity in Recursion"
+      }
+    ],
+    "uncoveredCos": [],
+    "outOfScopeQuestions": [
+      {
+        "id": "A7",
+        "label": "7",
+        "marks": 3,
+        "modules": [
+          4
+        ],
+        "why": "Printed as Part A question 7 with CO tag CO4."
+      },
+      {
+        "id": "A8",
+        "label": "8",
+        "marks": 3,
+        "modules": [
+          4
+        ],
+        "why": "Printed as Part A question 8 with CO tag CO4."
+      },
+      {
+        "id": "B15",
+        "label": "15",
+        "marks": 9,
+        "modules": [
+          4
+        ],
+        "why": "Printed as Module -4 question 15 with CO tag CO4."
+      },
+      {
+        "id": "B16",
+        "label": "16",
+        "marks": 9,
+        "modules": [
+          4
+        ],
+        "why": "Printed as Module -4 question 16 with CO tag CO4."
+      }
+    ],
+    "unknownTopicQuestions": [
+      {
+        "id": "A7",
+        "label": "7",
+        "topicIds": [
+          "4.11"
+        ],
+        "why": "The topics tagged for this question are not in the confirmed syllabus."
+      },
+      {
+        "id": "A8",
+        "label": "8",
+        "topicIds": [
+          "4.1"
+        ],
+        "why": "The topics tagged for this question are not in the confirmed syllabus."
+      },
+      {
+        "id": "B15",
+        "label": "15",
+        "topicIds": [
+          "4.2",
+          "4.10"
+        ],
+        "why": "The topics tagged for this question are not in the confirmed syllabus."
+      },
+      {
+        "id": "B16",
+        "label": "16",
+        "topicIds": [
+          "4.5",
+          "4.7"
+        ],
+        "why": "The topics tagged for this question are not in the confirmed syllabus."
+      }
+    ],
+    "eitherOrGroups": [
+      {
+        "id": "B-m1",
+        "questionIds": [
+          "B9",
+          "B10"
+        ],
+        "marks": 9,
+        "counted": true
+      },
+      {
+        "id": "B-m2",
+        "questionIds": [
+          "B11",
+          "B12"
+        ],
+        "marks": 9,
+        "counted": true
+      },
+      {
+        "id": "B-m3",
+        "questionIds": [
+          "B13",
+          "B14"
+        ],
+        "marks": 9,
+        "counted": true
+      },
+      {
+        "id": "B-m4",
+        "questionIds": [
+          "B15",
+          "B16"
+        ],
+        "marks": 9,
+        "counted": true
+      }
+    ],
+    "offScope": {
+      "questionIds": [
+        "A7",
+        "A8",
+        "B15",
+        "B16"
+      ],
+      "labels": [
+        "7",
+        "8",
+        "15",
+        "16"
+      ],
+      "modules": [
+        4
+      ],
+      "printedMarks": 24,
+      "answerableMarks": 15,
+      "percent": 25
+    },
+    "totals": {
+      "printedMarks": 96,
+      "answerableMarks": 60,
+      "inScopeAnswerableMarks": 45,
+      "offScopeAnswerableMarks": 15,
+      "examMaxMarks": 60,
+      "inScopeModules": [
+        1,
+        2,
+        3
+      ],
+      "questionCount": 16,
+      "countsMismatch": false
+    }
+  },
+  "bloomCheck": {
+    "rows": [
+      {
+        "questionId": "A1",
+        "label": "1",
+        "assessed": "K2",
+        "co": "CO1",
+        "coBloom": "K2",
+        "status": "match",
+        "delta": 0
+      },
+      {
+        "questionId": "A2",
+        "label": "2",
+        "assessed": "K3",
+        "co": "CO1",
+        "coBloom": "K2",
+        "status": "above",
+        "delta": 1
+      },
+      {
+        "questionId": "A3",
+        "label": "3",
+        "assessed": "K3",
+        "co": "CO2",
+        "coBloom": "K3",
+        "status": "match",
+        "delta": 0
+      },
+      {
+        "questionId": "A4",
+        "label": "4",
+        "assessed": "K3",
+        "co": "CO2",
+        "coBloom": "K3",
+        "status": "match",
+        "delta": 0
+      },
+      {
+        "questionId": "A5",
+        "label": "5",
+        "assessed": "K2",
+        "co": "CO3",
+        "coBloom": "K3",
+        "status": "below",
+        "delta": -1
+      },
+      {
+        "questionId": "A6",
+        "label": "6",
+        "assessed": "K3",
+        "co": "CO3",
+        "coBloom": "K3",
+        "status": "match",
+        "delta": 0
+      },
+      {
+        "questionId": "A7",
+        "label": "7",
+        "assessed": "K2",
+        "co": "CO4",
+        "coBloom": "K3",
+        "status": "below",
+        "delta": -1
+      },
+      {
+        "questionId": "A8",
+        "label": "8",
+        "assessed": "K3",
+        "co": "CO4",
+        "coBloom": "K3",
+        "status": "match",
+        "delta": 0
+      },
+      {
+        "questionId": "B9",
+        "label": "9",
+        "assessed": "K2",
+        "co": "CO1",
+        "coBloom": "K2",
+        "status": "match",
+        "delta": 0
+      },
+      {
+        "questionId": "B10",
+        "label": "10",
+        "assessed": "K3",
+        "co": "CO1",
+        "coBloom": "K2",
+        "status": "above",
+        "delta": 1
+      },
+      {
+        "questionId": "B11",
+        "label": "11",
+        "assessed": "K3",
+        "co": "CO2",
+        "coBloom": "K3",
+        "status": "match",
+        "delta": 0
+      },
+      {
+        "questionId": "B12",
+        "label": "12",
+        "assessed": "K3",
+        "co": "CO2",
+        "coBloom": "K3",
+        "status": "match",
+        "delta": 0
+      },
+      {
+        "questionId": "B13",
+        "label": "13",
+        "assessed": "K3",
+        "co": "CO3",
+        "coBloom": "K3",
+        "status": "match",
+        "delta": 0
+      },
+      {
+        "questionId": "B14",
+        "label": "14",
+        "assessed": "K3",
+        "co": "CO3",
+        "coBloom": "K3",
+        "status": "match",
+        "delta": 0
+      },
+      {
+        "questionId": "B15",
+        "label": "15",
+        "assessed": "K4",
+        "co": "CO4",
+        "coBloom": "K3",
+        "status": "above",
+        "delta": 1
+      },
+      {
+        "questionId": "B16",
+        "label": "16",
+        "assessed": "K4",
+        "co": "CO4",
+        "coBloom": "K3",
+        "status": "above",
+        "delta": 1
+      }
+    ],
+    "mismatches": [
+      {
+        "questionId": "A2",
+        "label": "2",
+        "assessed": "K3",
+        "co": "CO1",
+        "coBloom": "K2",
+        "status": "above",
+        "delta": 1
+      },
+      {
+        "questionId": "A5",
+        "label": "5",
+        "assessed": "K2",
+        "co": "CO3",
+        "coBloom": "K3",
+        "status": "below",
+        "delta": -1
+      },
+      {
+        "questionId": "A7",
+        "label": "7",
+        "assessed": "K2",
+        "co": "CO4",
+        "coBloom": "K3",
+        "status": "below",
+        "delta": -1
+      },
+      {
+        "questionId": "B10",
+        "label": "10",
+        "assessed": "K3",
+        "co": "CO1",
+        "coBloom": "K2",
+        "status": "above",
+        "delta": 1
+      },
+      {
+        "questionId": "B15",
+        "label": "15",
+        "assessed": "K4",
+        "co": "CO4",
+        "coBloom": "K3",
+        "status": "above",
+        "delta": 1
+      },
+      {
+        "questionId": "B16",
+        "label": "16",
+        "assessed": "K4",
+        "co": "CO4",
+        "coBloom": "K3",
+        "status": "above",
+        "delta": 1
+      }
+    ],
+    "unknown": []
+  },
+  "hotspots": [],
+  "flags": [
+    {
+      "id": "F-A1-vague-wording",
+      "questionId": "A1",
+      "type": "vague-wording",
+      "severity": "medium",
+      "reason": "The question does not say how much of the trial-and-error process is expected, so a one-line answer and a full worked trace would both look defensible to a marker.",
+      "evidence": "How will you solve it using trial and error method?",
+      "rewrite": "A jigsaw puzzle has 12 pieces and no reference picture. Describe the trial-and-error process you would follow, listing at least three failed placements and explaining how you decide which piece to try next. (3 marks)"
+    },
+    {
+      "id": "F-A2-multiple-interpretations",
+      "questionId": "A2",
+      "type": "multiple-interpretations",
+      "severity": "high",
+      "reason": "The input \"1234 5\" contains a space, so \"numeric\" could mean the whole string, either token, or the string after stripping, and the three readings give different code.",
+      "evidence": "check if it is numeric",
+      "rewrite": "Given the string s = \"1234 5\", write a Python snippet that reports whether s consists only of digits, and state what your snippet prints for s. Name the string method you use. (3 marks)"
+    },
+    {
+      "id": "F-A3-missing-constraint",
+      "questionId": "A3",
+      "type": "missing-constraint",
+      "severity": "medium",
+      "reason": "A flowchart for the first n Fibonacci numbers is undefined at the start: the question does not say whether 0 and 1 both appear, nor what happens for n = 1.",
+      "evidence": "generate the first 'n' numbers in the Fibonacci sequence",
+      "rewrite": "Draw a flowchart that prints the first n Fibonacci numbers, starting from 0 and 1, for any integer n >= 1. Include the decision for the case n = 1 and label the loop's exit condition. (3 marks)"
+    },
+    {
+      "id": "F-A5-marks-effort-mismatch",
+      "questionId": "A5",
+      "type": "marks-effort-mismatch",
+      "severity": "high",
+      "reason": "Three separate outputs are asked for, including an operator-precedence expression, and each needs a trace worth more than the single mark this sub-question can carry.",
+      "evidence": "(i) ... (ii) ... (iii) 2*3**2**2",
+      "rewrite": "Write the output produced by each of the following, and for (iii) show the order in which the operators are evaluated. (i) for count in range(-10,-20,-2): print(count, end=\" \") (ii) for i in range(10,-1,-2): print(i) (iii) 2*3**2**2 (3 marks)",
+      "rewriteMarks": 3
+    },
+    {
+      "id": "F-A6-missing-data",
+      "questionId": "A6",
+      "type": "missing-data",
+      "severity": "medium",
+      "reason": "\"N given numbers\" never says where the numbers come from or whether negatives count as even, so a correct program can still be marked wrong.",
+      "evidence": "sum of even numbers from N given numbers",
+      "rewrite": "Write a Python program that reads N, then reads N integers, and prints the sum of those that are even. Treat 0 as even and negative even numbers as even. Show the output for the input 4, then 3 -2 0 7. (3 marks)"
+    },
+    {
+      "id": "F-A7-vague-wording",
+      "questionId": "A7",
+      "type": "vague-wording",
+      "severity": "medium",
+      "reason": "\"Motivation\" has no stated scope, so answers range from one sentence to a page and markers have no anchor.",
+      "evidence": "What is the motivation for using a randomized approach",
+      "rewrite": "State two reasons why a randomized approach is preferred over a deterministic one for a problem where the input distribution is unknown, and give one example problem where randomization helps. (3 marks)"
+    },
+    {
+      "id": "F-A8-missing-constraint",
+      "questionId": "A8",
+      "type": "missing-constraint",
+      "severity": "high",
+      "reason": "A brute-force recovery of a 4-digit password is asked for without any constraint on the search space or attempt limit, so \"an algorithm\" could be 10,000 attempts or a single guess.",
+      "evidence": "Write an algorithm for recovering the 4-digit numeric password",
+      "rewrite": "A 4-digit numeric password is verified by a function check(p) that returns true only for the correct password. Write an algorithm that recovers the password by exhaustive search over all 4-digit strings, and state the maximum number of calls to check it makes. (3 marks)"
+    },
+    {
+      "id": "F-B9-double-barreled",
+      "questionId": "B9",
+      "type": "double-barreled",
+      "severity": "medium",
+      "reason": "Part a) asks for the backtracking strategy and its application to Sudoku, which are two separate answers, and the 5 marks do not say how they are split.",
+      "evidence": "Explain how backtracking strategy can be applied to solve Sudoku problem?",
+      "rewrite": "a) State the backtracking strategy in two or three sentences, then apply it to a 4x4 Sudoku by showing the state after the first two placements and the first point at which the algorithm backtracks. (5 marks)"
+    },
+    {
+      "id": "F-B10-multiple-interpretations",
+      "questionId": "B10",
+      "type": "multiple-interpretations",
+      "severity": "medium",
+      "reason": "\"Apply Means-Ends Analysis to develop the software\" has no stated goal state or operators, which are the two things the technique is defined by, so any narrative answer is acceptable.",
+      "evidence": "How will you apply Means-Ends Analysis to develop the software?",
+      "rewrite": "Apply Means-Ends Analysis to the goal \"a campus management system where a student can register for a course\". State the current state, the goal state, two operators, and the difference each operator reduces. (6 marks)"
+    },
+    {
+      "id": "F-B11-missing-constraint",
+      "questionId": "B11",
+      "type": "missing-constraint",
+      "severity": "high",
+      "reason": "The grade bands overlap (60-70 and 50-69 both include neither 60 nor 69 cleanly against 70-79), and the \"next multiple of 10\" rule has no tie-break, so two correct pseudocodes can grade the same mark differently.",
+      "evidence": "Marks 60-70: Grade D; Marks 50-69: Grade E",
+      "rewrite": "Write pseudocode for a grading system using these bands: 90-100 A, 80-89 B, 70-79 C, 60-69 D, 50-59 E, below 50 F. Then apply this promotion rule: if the mark is within 3 below the next multiple of 10, raise it to the next band, except when the mark is below 50. Handle exactly 50 and exactly 90 explicitly. (6 marks)"
+    },
+    {
+      "id": "F-B11-marks-effort-mismatch",
+      "questionId": "B11",
+      "type": "marks-effort-mismatch",
+      "severity": "medium",
+      "reason": "Part b) describes a long logistics scenario but the actual task, printing numbers divisible by 6 and not by 4, is a two-line loop that is worth less than the 3 marks it carries.",
+      "evidence": "divisible by 6 ... but not divisible by 4",
+      "rewrite": "b) Write an algorithm that reads a list of n delivery times and prints only those divisible by 6 but not by 4. Then state the time complexity of your algorithm and justify it. (3 marks)"
+    },
+    {
+      "id": "F-B12-vague-wording",
+      "questionId": "B12",
+      "type": "vague-wording",
+      "severity": "medium",
+      "reason": "\"Ensuring the solution is efficient for real-world applications\" is not a measurable requirement, so efficiency cannot be marked either way.",
+      "evidence": "ensuring the solution is efficient for real-world applications",
+      "rewrite": "a) Write the pseudocode to find the largest and smallest numbers in a list of N numbers. State the number of comparisons your solution makes in the worst case, and explain why a single pass is or is not sufficient. (6 marks)"
+    },
+    {
+      "id": "F-B13-missing-data",
+      "questionId": "B13",
+      "type": "missing-data",
+      "severity": "medium",
+      "reason": "Part b) does not state the tolerance for the right-triangle test, which matters for floating-point side lengths and for whether the sides are integers.",
+      "evidence": "determine whether or not the triangle is a right triangle",
+      "rewrite": "b) Write a program that reads the three side lengths of a triangle as floating-point numbers and decides whether it is right-angled, using a tolerance of 1e-9 when comparing a^2 + b^2 with c^2. Also report whether the three sides form a valid triangle at all. (4 marks)"
+    },
+    {
+      "id": "F-B14-double-barreled",
+      "questionId": "B14",
+      "type": "double-barreled",
+      "severity": "medium",
+      "reason": "Part b) asks for a classification rule, a rearrangement, and a single-word output, which is three asks inside 3 marks.",
+      "evidence": "all capital letters to appear first, followed by small letters, then digits, and finally any special characters",
+      "rewrite": "b) Write a Python function that takes a string and returns its characters rearranged as capitals, then small letters, then digits, then other characters, preserving the order within each group. Show the result for \"Py3_th@on\". (3 marks)"
+    },
+    {
+      "id": "F-B15-figure-dependent",
+      "questionId": "B15",
+      "type": "figure-dependent",
+      "severity": "low",
+      "reason": "The question asks for a Divide and Conquer solution but the paper gives no array to work on, so the \"suitable example\" is entirely of the candidate’s choosing.",
+      "evidence": "Explain with a suitable example",
+      "rewrite": "a) Given the array of loan interest rates [9.5, 7.25, 11.0, 8.4, 6.9, 10.2], find the sum of the two smallest rates using a Divide and Conquer approach. Show the split, the combine step, and the recurrence for the running time. (6 marks)"
+    },
+    {
+      "id": "F-B16-missing-constraint",
+      "questionId": "B16",
+      "type": "missing-constraint",
+      "severity": "medium",
+      "reason": "The greedy task-scheduling problem never says whether tasks must be taken in the given order or may be sorted, and the two readings have different answers.",
+      "evidence": "maximum number of tasks you can complete in a given total time limit",
+      "rewrite": "b) Given an array of task durations and a total time limit T, determine the maximum number of tasks that can be completed. State whether tasks may be reordered; if they may, sort by duration ascending and justify why that greedy choice is optimal. (3 marks)"
+    },
+    {
+      "id": "derived-oos-A7",
+      "questionId": "A7",
+      "type": "out-of-scope",
+      "severity": "high",
+      "reason": "Printed as Part A question 7 with CO tag CO4.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-oos-A8",
+      "questionId": "A8",
+      "type": "out-of-scope",
+      "severity": "high",
+      "reason": "Printed as Part A question 8 with CO tag CO4.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-oos-B15",
+      "questionId": "B15",
+      "type": "out-of-scope",
+      "severity": "high",
+      "reason": "Printed as Module -4 question 15 with CO tag CO4.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-oos-B16",
+      "questionId": "B16",
+      "type": "out-of-scope",
+      "severity": "high",
+      "reason": "Printed as Module -4 question 16 with CO tag CO4.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.1",
+      "questionId": "",
+      "topicId": "1.1",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"PROBLEM-SOLVING STRATEGIES\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.2",
+      "questionId": "",
+      "topicId": "1.2",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Problem-solving strategies defined\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.3",
+      "questionId": "",
+      "topicId": "1.3",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Importance of understanding multiple problem-solving strategies\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.8",
+      "questionId": "",
+      "topicId": "1.8",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"THE PROBLEM-SOLVING PROCESS\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.9",
+      "questionId": "",
+      "topicId": "1.9",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Computer as a model of computation\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.10",
+      "questionId": "",
+      "topicId": "1.10",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Understanding the problem\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.11",
+      "questionId": "",
+      "topicId": "1.11",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Formulating a model\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.12",
+      "questionId": "",
+      "topicId": "1.12",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Developing an algorithm\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.13",
+      "questionId": "",
+      "topicId": "1.13",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Writing the program\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.14",
+      "questionId": "",
+      "topicId": "1.14",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Testing the program\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.15",
+      "questionId": "",
+      "topicId": "1.15",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Evaluating the solution\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.16",
+      "questionId": "",
+      "topicId": "1.16",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"ESSENTIALS OF PYTHON PROGRAMMING\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.17",
+      "questionId": "",
+      "topicId": "1.17",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Creating and using variables in Python\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.20",
+      "questionId": "",
+      "topicId": "1.20",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Using the Python Standard Library for handling basic I/O - print, input\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-1.21",
+      "questionId": "",
+      "topicId": "1.21",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Python operators and their precedence\" (Module 1) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-2.2",
+      "questionId": "",
+      "topicId": "2.2",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Meaning and Definition of Pseudocode\" (Module 2) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-2.3",
+      "questionId": "",
+      "topicId": "2.3",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Reasons for using pseudocode\" (Module 2) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-2.7",
+      "questionId": "",
+      "topicId": "2.7",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Symbols used in creating a Flowchart - start and end, arithmetic calculations, input/output operation, decision (selection), module name (call), for loop (Hexagon), flow-lines, on-page connector, off-page connector\" (Module 2) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-2.8",
+      "questionId": "",
+      "topicId": "2.8",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Only for visualizing the control flow of Algorithms; the use of tools like RAPTOR is suggested\" (Module 2) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-3.3",
+      "questionId": "",
+      "topicId": "3.3",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Creating and using Arrays in Python (using Numpy library)\" (Module 3) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-3.4",
+      "questionId": "",
+      "topicId": "3.4",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"DECOMPOSITION AND MODULARIZATION\" (Module 3) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-3.5",
+      "questionId": "",
+      "topicId": "3.5",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Problem decomposition as a strategy for solving complex problems\" (Module 3) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-3.6",
+      "questionId": "",
+      "topicId": "3.6",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Modularization\" (Module 3) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-3.7",
+      "questionId": "",
+      "topicId": "3.7",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Motivation for modularization\" (Module 3) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-3.8",
+      "questionId": "",
+      "topicId": "3.8",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Defining and using functions in Python\" (Module 3) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-3.9",
+      "questionId": "",
+      "topicId": "3.9",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Functions with multiple return values\" (Module 3) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-3.10",
+      "questionId": "",
+      "topicId": "3.10",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"RECURSION\" (Module 3) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-3.12",
+      "questionId": "",
+      "topicId": "3.12",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Reasons for using Recursion\" (Module 3) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-3.13",
+      "questionId": "",
+      "topicId": "3.13",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"The Call Stack\" (Module 3) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-3.14",
+      "questionId": "",
+      "topicId": "3.14",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Recursion and the Stack\" (Module 3) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-unc-3.15",
+      "questionId": "",
+      "topicId": "3.15",
+      "type": "uncovered-topic",
+      "severity": "medium",
+      "reason": "In-scope topic \"Avoiding Circularity in Recursion\" (Module 3) carries no marks on this paper.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-bloom-A2",
+      "questionId": "A2",
+      "type": "bloom-mismatch",
+      "severity": "low",
+      "reason": "Assessed at K3 but its CO1 outcome is at K2.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-bloom-A5",
+      "questionId": "A5",
+      "type": "bloom-mismatch",
+      "severity": "low",
+      "reason": "Assessed at K2 but its CO3 outcome is at K3.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-bloom-A7",
+      "questionId": "A7",
+      "type": "bloom-mismatch",
+      "severity": "low",
+      "reason": "Assessed at K2 but its CO4 outcome is at K3.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-bloom-B10",
+      "questionId": "B10",
+      "type": "bloom-mismatch",
+      "severity": "low",
+      "reason": "Assessed at K3 but its CO1 outcome is at K2.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-bloom-B15",
+      "questionId": "B15",
+      "type": "bloom-mismatch",
+      "severity": "low",
+      "reason": "Assessed at K4 but its CO4 outcome is at K3.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    },
+    {
+      "id": "derived-bloom-B16",
+      "questionId": "B16",
+      "type": "bloom-mismatch",
+      "severity": "low",
+      "reason": "Assessed at K4 but its CO4 outcome is at K3.",
+      "evidence": "",
+      "rewrite": "",
+      "derived": true
+    }
+  ],
+  "duplicates": [
+    {
+      "questionIds": [
+        "B11",
+        "B12"
+      ],
+      "severity": "medium",
+      "reason": "Both part a) answers are pseudocode for a conditional over a list, and both part b) answers are a short pseudocode loop. Candidates can reuse the same structure twice for 18 marks."
+    },
+    {
+      "questionIds": [
+        "B9",
+        "B10"
+      ],
+      "severity": "low",
+      "reason": "Both begin by naming a problem-solving strategy and then asking for its application to a supplied scenario. The second is largely a re-test of the first."
+    },
+    {
+      "questionIds": [
+        "A3",
+        "B13"
+      ],
+      "severity": "medium",
+      "reason": "The Fibonacci sequence is the subject of a Part A flowchart and again of a Part B recursive program, so one topic carries 12 marks."
+    }
+  ],
+  "suggestions": [
+    {
+      "coversTopicId": "3.4",
+      "module": 3,
+      "co": "CO3",
+      "bloom": "K2",
+      "marks": 3,
+      "text": "Define modularization and state two reasons why decomposing a problem into modules makes it easier to test.",
+      "rationale": "Module 3 carries no marks for decomposition or modularization on this paper, and the topic is explicitly in the syllabus. Closes the coverage gap on topic 3.4."
+    },
+    {
+      "coversTopicId": "3.15",
+      "module": 3,
+      "co": "CO3",
+      "bloom": "K4",
+      "marks": 3,
+      "text": "Explain why a recursive function without a base case that is guaranteed to be reached causes a stack overflow, using a two-line Python example to illustrate.",
+      "rationale": "This topic carries zero marks even though it is the failure mode behind two of the paper’s recursion questions. Closes the coverage gap on topic 3.15."
+    },
+    {
+      "coversTopicId": "3.9",
+      "module": 3,
+      "co": "CO3",
+      "bloom": "K3",
+      "marks": 3,
+      "text": "Write a Python function that takes a list of integers and returns both the smallest value and its index, in a single return statement.",
+      "rationale": "Gives Module 3 a 3-mark apply-level question on a topic the paper never touches. Closes the coverage gap on topic 3.9."
+    },
+    {
+      "coversTopicId": "3.3",
+      "module": 3,
+      "co": "CO3",
+      "bloom": "K3",
+      "marks": 3,
+      "text": "Using the Numpy library, create an array of the first ten even numbers and print the count of values greater than 10.",
+      "rationale": "Arrays via Numpy are in the syllabus and earn no marks on this paper. Closes the coverage gap on topic 3.3."
+    },
+    {
+      "coversTopicId": "3.4",
+      "module": 3,
+      "co": "CO3",
+      "bloom": "K2",
+      "marks": 3,
+      "text": "Differentiate between problem decomposition and modularization, and state how each contributes to solving a complex problem.",
+      "rationale": "A K2 comparison that closes the largest single gap in Module 3 coverage. Closes the coverage gap on topic 3.4."
+    },
+    {
+      "coversTopicId": "3.14",
+      "module": 3,
+      "co": "CO3",
+      "bloom": "K2",
+      "marks": 3,
+      "text": "Sketch the call stack after three recursive calls of a factorial function with input 3, labelling each frame and its return value.",
+      "rationale": "The paper tests writing recursive code but never the stack behaviour the syllabus pairs with it. Closes the coverage gap on topic 3.14."
+    },
+    {
+      "replacesQuestionId": "A2",
+      "module": 1,
+      "co": "CO1",
+      "bloom": "K3",
+      "marks": 3,
+      "text": "Given the string s = \"1234 5\", write a Python snippet that reports whether s consists only of digits, and state what your snippet prints for s. Name the string method you use. (3 marks)",
+      "rationale": "Drop-in replacement fixing the ambiguity flagged on A2."
+    },
+    {
+      "replacesQuestionId": "B11",
+      "module": 2,
+      "co": "CO2",
+      "bloom": "K3",
+      "marks": 9,
+      "text": "Write pseudocode for a grading system using these bands: 90-100 A, 80-89 B, 70-79 C, 60-69 D, 50-59 E, below 50 F. Then apply this promotion rule: if the mark is within 3 below the next multiple of 10, raise it to the next band, except when the mark is below 50. Handle exactly 50 and exactly 90 explicitly. (6 marks)",
+      "rationale": "Drop-in replacement fixing the ambiguity flagged on B11."
+    }
+  ],
+  "summary": {
+    "headline": "4 questions sit outside the scope you declared, and 31 in-scope topics earn no marks.",
+    "verdict": "needs-rework",
+    "strengths": [
+      "Every question carries a printed CO tag, so the paper is well traced to its outcomes.",
+      "The Part A / Part B split matches the 2024-scheme pattern exactly: 8 x 3 plus 4 x 9, with either/or choices only in Part B.",
+      "Scenario-based framing in Part B gives candidates a realistic context rather than a bare recall prompt."
+    ],
+    "risks": [
+      "Questions 7, 8, 15, 16 assess Module 4, which you declared out of scope, so they will be unanswerable for a class taught only Modules 1-3.",
+      "31 in-scope topics, including recursion on the call stack and modularization, carry no marks at all, so strong candidates get no credit for knowing them.",
+      "Question 11 a) prints overlapping grade bands (60-70 and 50-69), which will make marking inconsistent.",
+      "Several 3-mark questions ask for three separate outputs or for work that needs far more than three marks of effort."
+    ],
+    "actions": [
+      "Either widen the scope to include Module 4, or replace questions 7, 8, 15 and 16 with Module 1-3 questions.",
+      "Accept the proposed replacements for questions A2 and B11 a) to remove the two highest-risk ambiguities.",
+      "Add one 3-mark question on recursion and the call stack, and one on modularization, to close the largest gaps in Module 3.",
+      "Fix the printed grade bands in question 11 a) before the paper goes to print; the overlap is a marking problem, not a wording preference."
+    ]
+  },
+  "stats": {
+    "llmCalls": 0,
+    "attempts": 0,
+    "repairs": 0,
+    "note": "Cached demo bundle: no model call was made."
+  },
+  "warnings": [
+    "This is the bundled demo bundle, generated from the real paper and the real 2024-scheme syllabus. Coverage, Bloom comparison, hotspots and persona arithmetic were computed by Paperguide, not by a model.",
+    "The scope deliberately excludes Module 4 so the out-of-scope and uncovered-topic checks are visible. 8 high-severity flags."
+  ]
+}

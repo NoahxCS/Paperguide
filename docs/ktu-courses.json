@@ -1,0 +1,583 @@
+{
+  "scheme": "KTU 2024",
+  "generatedFrom": [
+    "https://ktu.notesundo.in/api/download/pmh2Mu24",
+    "https://ktu.notesundo.in/api/download/VEcvDnF1",
+    "https://ktu.notesundo.in/api/download/bBig57Ev",
+    "https://ktu.notesundo.in/api/download/MqcvzosU",
+    "https://ktu.notesundo.in/api/download/BCq1DLg7",
+    "https://ktu.notesundo.in/api/download/YTsqXxPx",
+    "https://drive.google.com/file/d/1Lq18aPPxPtKDeGH8rGB7gxGttAav7LIN/view",
+    "https://drive.google.com/file/d/1H0g0MgYYVr8V1mhENImK--8JZlisGD1D/view",
+    "https://r.jina.ai/http://me.cet.ac.in/downloads/26-09-2025/B.Tech%20Academic%20Regulations%20KTU%202024%20Scheme.pdf",
+    "https://r.jina.ai/https://cetkr.ac.in/uploads/KTU_B.%20Tech_%20Curriculum_%202024.pdf",
+    "https://ktunotes.in/curriculum/2024/cse/",
+    "https://ktu.notesundo.in/syllabus/2024"
+  ],
+  "notes": [
+    "NO official ktu.edu.in direct PDF URL for a 2024-scheme course syllabus could be confirmed. ktu.edu.in / www.ktu.edu.in serve the Academics area as a client-rendered SPA; /academics/scheme, /academics/branchsyllabus, /academics/branchcurriculum/hardcoded-btech and /academics/view-questionpapers all return only site chrome when fetched, with no syllabus anchors. The apex host ktu.edu.in also fails TLS (ERR_CERT_COMMON_NAME_INVALID); only www.ktu.edu.in resolves.",
+    "A URL published by search engines, https://ktu.edu.in/data/Syllabus for S1 and S2_KTU.pdf, was tested and does NOT serve a PDF (it returns the SPA HTML shell), so it is recorded here as unverified/not a working syllabus link.",
+    "sourceUrl for each course is an unofficial third-party mirror (ktu.notesundo.in), because no official per-course PDF URL was reachable. Every mirror PDF is an unmodified KTU document: each carries the running header 'B.Tech 2024 -S1/S2' (S1 courses) and footer 'APJ Abdul Kalam Technological University', and each reproduces KTU's own 'Course Assessment Method (CIE: 40 marks, ESE: 60 marks)' block.",
+    "Topic strings are verbatim phrases lifted from the module paragraph in the source PDF. KTU writes each module as one dense paragraph separated by semicolons and CAPITALISED lead-ins; the array here is that same text split at those separators. No topic text was rewritten.",
+    "CO statements and Bloom's codes are verbatim from the source PDF's Course Outcomes table. KTU codes this column 'Bloom's Knowledge Level (KL)'.",
+    "Module 'hours' are the 'Contact Hours' column of the source PDF. They are per-module contact hours, not the L/T/P/R teaching hours.",
+    "examPattern is taken from the 'End Semester Examination Marks (ESE)' block inside each syllabus PDF. UCHUT346 is an HMC course and therefore has a DIFFERENT pattern (50 marks, 6x3 Part A, 4x8 Part B) - do not assume the 60-mark pattern for every course.",
+    "durationHours 2.5 = 'Exam Hours 2 Hrs. 30 Min.' as printed in every syllabus header observed. The Academic Regulations 2024 do not themselves fix an ESE duration; they only fix the 2-hour internal written examination (R 7.5).",
+    "Not verified: lab/practical courses, seminars, projects and Level 5 elective courses were not retrieved as syllabus documents, so no examPattern variant for those is asserted. The 2019->2024 comparison claims circulating on non-official sites (for example 'Python replaced C in S1') are not reproduced here because the official 2024 curriculum shows BOTH 'Algorithmic Thinking with Python' (UCEST105, S1) and 'Programming in C' (GXEST204, S2) as separate courses.",
+    "Two official KTU documents disagree on the course-category credit split for 2024: the Academic Regulations 2024 R 3.15 gives PCC 52 and PWS 12, while the B.Tech Curriculum 2024 gives PCC 54 and PWS 10 (both total 167 academic credits). This is an inconsistency in the sources, not a transcription error here.",
+    "PCECT302 is indexed under the mirror's slug 'solid-state-devices' but the PDF asset is named 'Analog-Circuits-PCECT302'. The PDF's own heading is 'SEMESTER S3 SOLID STATE DEVICES', which is what is recorded here.",
+    "The 6 courses below are all courses for which a real module list AND a real CO table were retrieved. They are a seed index, not the full 2024 course catalogue."
+  ],
+  "courses": [
+    {
+      "code": "UCEST105",
+      "title": "Algorithmic Thinking with Python",
+      "semester": 1,
+      "branch": "Common",
+      "credits": {"L": 3, "T": 0, "P": 2, "C": 4},
+      "courseType": "Theory (Course Type ESC, Course Category UC - University Core); common to all branches; offered in S1 or S2",
+      "modules": [
+        {
+          "no": 1,
+          "title": "Problem-Solving Strategies; The Problem-Solving Process; Essentials of Python Programming",
+          "topics": [
+            "PROBLEM-SOLVING STRATEGIES",
+            "Problem-solving strategies defined",
+            "Importance of understanding multiple problem-solving strategies",
+            "Trial and Error",
+            "Heuristics",
+            "Means-Ends Analysis",
+            "Backtracking (Working backward)",
+            "THE PROBLEM-SOLVING PROCESS",
+            "Computer as a model of computation",
+            "Understanding the problem",
+            "Formulating a model",
+            "Developing an algorithm",
+            "Writing the program",
+            "Testing the program",
+            "Evaluating the solution",
+            "ESSENTIALS OF PYTHON PROGRAMMING",
+            "Creating and using variables in Python",
+            "Numeric and String data types in Python",
+            "Using the math module",
+            "Using the Python Standard Library for handling basic I/O - print, input",
+            "Python operators and their precedence"
+          ],
+          "hours": 7
+        },
+        {
+          "no": 2,
+          "title": "Algorithm and Pseudocode Representation; Flowcharts",
+          "topics": [
+            "ALGORITHM AND PSEUDOCODE REPRESENTATION",
+            "Meaning and Definition of Pseudocode",
+            "Reasons for using pseudocode",
+            "The main constructs of pseudocode - Sequencing, selection (if-else structure, case structure) and repetition (for, while, repeat-until loops)",
+            "Sample problems (find simple interest, determine the larger of two numbers, factorial of a number, largest of n numbers, and others)",
+            "FLOWCHARTS",
+            "Symbols used in creating a Flowchart - start and end, arithmetic calculations, input/output operation, decision (selection), module name (call), for loop (Hexagon), flow-lines, on-page connector, off-page connector",
+            "Only for visualizing the control flow of Algorithms; the use of tools like RAPTOR is suggested"
+          ],
+          "hours": 9
+        },
+        {
+          "no": 3,
+          "title": "Selection and Iteration Using Python; Decomposition and Modularization; Recursion",
+          "topics": [
+            "SELECTION AND ITERATION USING PYTHON:- if-else, elif, for loop, range, while loop",
+            "Sequence data types in Python - list, tuple, set, strings, dictionary",
+            "Creating and using Arrays in Python (using Numpy library)",
+            "DECOMPOSITION AND MODULARIZATION",
+            "Problem decomposition as a strategy for solving complex problems",
+            "Modularization",
+            "Motivation for modularization",
+            "Defining and using functions in Python",
+            "Functions with multiple return values",
+            "RECURSION",
+            "Recursion Defined",
+            "Reasons for using Recursion",
+            "The Call Stack",
+            "Recursion and the Stack",
+            "Avoiding Circularity in Recursion",
+            "Sample problems - Finding the nth Fibonacci number, greatest common divisor of two positive integers, the factorial of a positive integer, adding two positive integers, the sum of digits of a positive number"
+          ],
+          "hours": 10
+        },
+        {
+          "no": 4,
+          "title": "Computational Approaches to Problem-Solving",
+          "topics": [
+            "Brute-force Approach - Example: Padlock, Password guessing",
+            "Divide-and-conquer Approach - Example: The Merge Sort Algorithm",
+            "Advantages of Divide and Conquer Approach",
+            "Disadvantages of Divide and Conquer Approach",
+            "Dynamic Programming Approach - Example: Fibonacci series",
+            "Recursion vs Dynamic Programming",
+            "Greedy Algorithm Approach - Example: given an array of positive integers each indicating the completion time for a task, find the maximum number of tasks that can be completed in the limited amount of time that you have",
+            "Motivations for the Greedy Approach",
+            "Characteristics of the Greedy Algorithm",
+            "Greedy Algorithms vs Dynamic Programming",
+            "Randomized Approach - Example 1: coupon collector (jeans coupons); Example 2: hat-check problem",
+            "Motivations for the Randomized Approach",
+            "Introductory diagrammatic/algorithmic explanations only; Analysis not required"
+          ],
+          "hours": 10
+        }
+      ],
+      "courseOutcomes": [
+        {"co": "CO1", "statement": "Utilize computing as a model for solving real-world problems.", "bloom": "K2"},
+        {"co": "CO2", "statement": "Articulate a problem before attempting to solve it and prepare a clear and accurate model to represent the problem.", "bloom": "K3"},
+        {"co": "CO3", "statement": "Utilize effective algorithms to solve the formulated models and translate algorithms into executable programs.", "bloom": "K3"},
+        {"co": "CO4", "statement": "Interpret the problem-solving strategies, a systematic approach to solving computational problems, and essential Python programming skills", "bloom": "K3"}
+      ],
+      "examPattern": {
+        "durationHours": 2.5,
+        "maxMarks": 60,
+        "cieMarks": 40,
+        "cieBreakdown": {"Attendance": 5, "Continuous Assessment (Accurate Execution of Programming Tasks)": 5, "Internal Examination-1 (Written)": 10, "Internal Examination-2 (Written)": 10, "Internal Examination-3 (Lab Examination)": 10, "Total": 40},
+        "parts": [
+          {"name": "Part A", "questions": 8, "marksPerQuestion": 3, "totalMarks": 24, "choice": "All questions need to be answered", "coverage": "2 questions from each module"},
+          {"name": "Part B", "questions": 4, "marksPerQuestion": 9, "totalMarks": 36, "choice": "Two questions from each module, out of which 1 full question should be answered", "coverage": "1 answered question per module", "maxSubDivisions": 3}
+        ]
+      },
+      "sourceUrl": "https://ktu.notesundo.in/api/download/pmh2Mu24"
+    },
+    {
+      "code": "GAMAT101",
+      "title": "Mathematics for Information Science-1",
+      "semester": 1,
+      "branch": "Common",
+      "credits": {"L": 3, "T": 0, "P": 0, "C": 3},
+      "courseType": "Theory (Course Type BSC, Course Category GC - Group Core); Group A",
+      "modules": [
+        {
+          "no": 1,
+          "title": "Limits, Continuity, Derivatives and Concavity",
+          "topics": [
+            "Limits of Function Values",
+            "Continuity at a point",
+            "Continuous Functions",
+            "Rates of Change: Derivative at a Point",
+            "Derivative as a Function",
+            "Second- and Higher-Order Derivatives",
+            "Instantaneous Rates of Change",
+            "Chain Rule",
+            "Implicit Differentiation",
+            "Tangents and Normal Lines",
+            "Linearization",
+            "Concavity: The Second Derivative Test for Concavity",
+            "[Relevant topics from: Text 1 - sections 2.2, 2.5, 3.1, 3.2, 3.3, 3.4, 3.6, 3.7, 3.9, 4.4]"
+          ],
+          "hours": 9
+        },
+        {
+          "no": 2,
+          "title": "Functions of Several Variables",
+          "topics": [
+            "Functions of Several Variables: Domains and Ranges",
+            "Level curves of two variables",
+            "Limits for functions of two variables",
+            "Continuity for functions of two variables",
+            "Partial derivatives of a functions of more than two variables",
+            "Partial derivatives and continuity",
+            "Second-Order partial derivatives",
+            "The mixed derivative theorem",
+            "The Chain Rule: Functions of two variables",
+            "[Relevant topics from: Text 1 - sections 14.1, 14.2, 14.3, 14.4]"
+          ],
+          "hours": 9
+        },
+        {
+          "no": 3,
+          "title": "Directional Derivatives, Gradient and Local Extreme Values",
+          "topics": [
+            "The Chain Rule: Functions of three Variables",
+            "Directional Derivatives in the Plane",
+            "Interpretation of the Directional Derivative",
+            "Gradient",
+            "Properties of the Directional Derivative",
+            "Local Extreme Values for Functions of Two Variables: Relative extrema",
+            "First derivative theorem for local extreme values",
+            "Critical point, saddle point",
+            "Second Derivative Test for Local Extreme Values",
+            "Absolute Maxima and Minima on Closed Bounded Regions",
+            "[Relevant topics from: Text 1 - sections 14.4, 14.5, 14.7]"
+          ],
+          "hours": 9
+        },
+        {
+          "no": 4,
+          "title": "Constrained Optimisation, Lagrange Multipliers and LPP",
+          "topics": [
+            "Constrained Maxima and Minima",
+            "The Method of Lagrange Multipliers with one constraint",
+            "The Method of Lagrange Multipliers with two constraints",
+            "Method of Steepest Descent (only two variables)",
+            "LPP-Formation",
+            "Solution of LPP using graphic method",
+            "[Relevant topics from: Text-1 section 14.8, Text-2 sections 22.1, 22.2]"
+          ],
+          "hours": 9
+        }
+      ],
+      "courseOutcomes": [
+        {"co": "CO1", "statement": "Apply various concepts in calculus to linearize functions and to analyze concavity.", "bloom": "K3"},
+        {"co": "CO2", "statement": "Calculate the limits for functions of two variables and partial derivatives of multivariable functions.", "bloom": "K3"},
+        {"co": "CO3", "statement": "Interpret directional derivative and solve maxima and minima of multivariable functions.", "bloom": "K3"},
+        {"co": "CO4", "statement": "Solve constrained maxima and minima, LPP and understand the method of Steepest Descent.", "bloom": "K3"}
+      ],
+      "examPattern": {
+        "durationHours": 2.5,
+        "maxMarks": 60,
+        "cieMarks": 40,
+        "cieBreakdown": {"Attendance": 5, "Assignment/ Microproject": 15, "Internal Examination-1 (Written)": 10, "Internal Examination-2 (Written)": 10, "Total": 40},
+        "parts": [
+          {"name": "Part A", "questions": 8, "marksPerQuestion": 3, "totalMarks": 24, "choice": "All questions need to be answered", "coverage": "2 questions from each module"},
+          {"name": "Part B", "questions": 4, "marksPerQuestion": 9, "totalMarks": 36, "choice": "Two questions from each module, out of which 1 full question should be answered", "coverage": "1 answered question per module", "maxSubDivisions": 3}
+        ]
+      },
+      "sourceUrl": "https://ktu.notesundo.in/api/download/VEcvDnF1"
+    },
+    {
+      "code": "PCCST302",
+      "title": "Theory of Computation",
+      "semester": 3,
+      "branch": "CSE",
+      "credits": {"L": 3, "T": 1, "P": 0, "C": 4},
+      "courseType": "Theory (Course Type PC, Course Category PC - Programme Core); Common to CS/CA/CM/CD/CN/CC",
+      "modules": [
+        {
+          "no": 1,
+          "title": "Foundations and Finite Automata",
+          "topics": [
+            "Foundations (Linz, Hopcroft)",
+            "Motivation for studying computability, need for mathematical modeling - automata",
+            "Introducing automata through simple models - On/Off switch, coffee vending machine",
+            "Three basic concepts: Alphabet, Strings, and Languages",
+            "Finite Automata (Linz, Hopcroft)",
+            "Formal definition of a finite automaton",
+            "Deterministic Finite Automata (DFA), Regular languages",
+            "Nondeterminism (guess and verify paradigm)",
+            "Formal definition of a nondeterministic finite automaton",
+            "NFA with epsilon transitions",
+            "Eliminating epsilon transitions (Proof not expected)",
+            "Equivalence of NFAs and DFAs (Proof not expected) - The Subset Construction",
+            "DFA State Minimization",
+            "Applications of finite automata - text search, keyword recognition"
+          ],
+          "hours": 11
+        },
+        {
+          "no": 2,
+          "title": "Regular Expressions, Properties of Regular Languages, Context-Free Grammars",
+          "topics": [
+            "Regular Expressions (Linz)",
+            "The formal definition of a regular expression",
+            "Building Regular Expressions",
+            "Equivalence with finite automata (Proof not expected) - Converting FA to Regular Expressions, Converting Regular Expressions to FA",
+            "Pattern Matching and Regular Expressions",
+            "Regular grammar, Equivalence with FA - Conversion in both directions",
+            "Properties of Regular Languages (Linz)",
+            "Closure and Decision Properties of Regular Languages (with proofs)",
+            "The Pumping Lemma for Regular Languages (with formal proof)",
+            "Pumping lemma as a tool to prove non regularity of languages",
+            "Context-Free Grammars and Applications (Linz)",
+            "Formal definition of a context-free grammar",
+            "Designing context-free grammars",
+            "Leftmost and Rightmost Derivations Using a Grammar",
+            "Parse Trees, Ambiguous Grammars, Resolving ambiguity, Inherent ambiguity",
+            "CFGs, and programming languages"
+          ],
+          "hours": 11
+        },
+        {
+          "no": 3,
+          "title": "Pushdown Automata and Simplification of Context-Free Languages",
+          "topics": [
+            "Pushdown Automata (Linz)",
+            "Formal definition of a pushdown automaton",
+            "DPDA and NPDA",
+            "Examples of pushdown automata",
+            "Equivalence NPDAs and CFGs (Proof not expected) - conversions in both directions",
+            "Simplification of Context-Free Languages (Linz)",
+            "Elimination of useless symbols and productions",
+            "Eliminating epsilon productions",
+            "Eliminating unit productions",
+            "Chomsky normal form, Greibach normal form",
+            "Properties of Context-Free Languages (Linz)",
+            "The Pumping Lemma for Context-Free Languages (with formal proof)",
+            "Closure and Decision Properties of Context-Free Languages (with formal proofs)"
+          ],
+          "hours": 11
+        },
+        {
+          "no": 4,
+          "title": "Turing Machines and Computability",
+          "topics": [
+            "Turing Machines (Kozen)",
+            "The formal definition of a Turing machine",
+            "Examples of Turing machines - Turing machines as language acceptors, Turing machines as computers of functions",
+            "Variants of Turing Machines (Proofs for equivalence with basic model not expected)",
+            "Recursive and recursively enumerable languages",
+            "Chomskian hierarchy",
+            "Linear bounded automaton as a restricted TM",
+            "Computability (Kozen)",
+            "Church Turing thesis",
+            "Encoding of TMs",
+            "Universal Machine and Diagonalization",
+            "Reductions",
+            "Decidable and Undecidable Problems",
+            "Halting problem",
+            "Post Correspondence Problem and the proofs for their undecidability"
+          ],
+          "hours": 11
+        }
+      ],
+      "courseOutcomes": [
+        {"co": "CO1", "statement": "Classify formal languages into regular, context-free, context-sensitive, and unrestricted languages.", "bloom": "K2"},
+        {"co": "CO2", "statement": "Develop finite state automata, regular grammar, and regular expression.", "bloom": "K3"},
+        {"co": "CO3", "statement": "Model push-down automata and context-free grammar representations for context-free languages.", "bloom": "K3"},
+        {"co": "CO4", "statement": "Construct Turing Machines to accept recursive and recursively enumerable languages.", "bloom": "K3"},
+        {"co": "CO5", "statement": "Describe the notions of decidability and undecidability of problems, the Halting problem.", "bloom": "K2"}
+      ],
+      "examPattern": {
+        "durationHours": 2.5,
+        "maxMarks": 60,
+        "cieMarks": 40,
+        "cieBreakdown": {"Attendance": 5, "Assignment/ Microproject": 15, "Internal Examination-1 (Written)": 10, "Internal Examination-2 (Written)": 10, "Total": 40},
+        "parts": [
+          {"name": "Part A", "questions": 8, "marksPerQuestion": 3, "totalMarks": 24, "choice": "All questions need to be answered", "coverage": "2 questions from each module"},
+          {"name": "Part B", "questions": 4, "marksPerQuestion": 9, "totalMarks": 36, "choice": "Two questions from each module, out of which 1 full question should be answered", "coverage": "1 answered question per module", "maxSubDivisions": 3}
+        ]
+      },
+      "sourceUrl": "https://ktu.notesundo.in/api/download/bBig57Ev"
+    },
+    {
+      "code": "PCCST303",
+      "title": "Data Structures and Algorithms",
+      "semester": 3,
+      "branch": "CSE",
+      "credits": {"L": 3, "T": 1, "P": 0, "C": 4},
+      "courseType": "Theory (Course Type PC, Course Category PC - Programme Core); Common to CS/CA/CM/CD/CR/AI/AM/AD/CB/CN/CC/CU/CI/CG",
+      "modules": [
+        {
+          "no": 1,
+          "title": "Basic Concepts of Data Structures",
+          "topics": [
+            "Definitions; Data Abstraction",
+            "Performance Analysis - Time & Space Complexity, Asymptotic Notations",
+            "Polynomial representation using Arrays, Sparse matrix (Tuple representation)",
+            "Stacks and Queues - Stacks, Multi-Stacks, Queues, Circular Queues, Double Ended Queues",
+            "Evaluation of Expressions - Infix to Postfix, Evaluating Postfix Expressions"
+          ],
+          "hours": 11
+        },
+        {
+          "no": 2,
+          "title": "Linked List and Memory Management",
+          "topics": [
+            "Singly Linked List - Operations on Linked List, Stacks and Queues using Linked List, Polynomial representation using Linked List",
+            "Doubly Linked List",
+            "Circular Linked List",
+            "Memory allocation - First-fit, Best-fit, and Worst-fit allocation schemes",
+            "Garbage collection and compaction"
+          ],
+          "hours": 11
+        },
+        {
+          "no": 3,
+          "title": "Trees and Graphs",
+          "topics": [
+            "Trees :- Representation Of Trees",
+            "Binary Trees - Types and Properties, Binary Tree Representation, Tree Operations, Tree Traversals",
+            "Expression Trees",
+            "Binary Search Trees - Binary Search Tree Operations",
+            "Binary Heaps - Binary Heap Operations, Priority Queue",
+            "Graphs :- Definitions; Representation of Graphs",
+            "Depth First Search and Breadth First Search",
+            "Applications of Graphs - Single Source All Destination"
+          ],
+          "hours": 11
+        },
+        {
+          "no": 4,
+          "title": "Sorting and Searching",
+          "topics": [
+            "Sorting Techniques :- Selection Sort, Insertion Sort, Quick Sort, Merge Sort, Heap Sort, Radix Sort",
+            "Searching Techniques :- Linear Search, Binary Search",
+            "Hashing - Hashing functions : Mid square, Division, Folding, Digit Analysis",
+            "Collision Resolution : Linear probing, Quadratic Probing, Double hashing, Open hashing"
+          ],
+          "hours": 11
+        }
+      ],
+      "courseOutcomes": [
+        {"co": "CO1", "statement": "Identify appropriate data structures for solving real world problems.", "bloom": "K3"},
+        {"co": "CO2", "statement": "Describe and implement linear data structures such as arrays, linked lists, stacks, and queues.", "bloom": "K3"},
+        {"co": "CO3", "statement": "Describe and Implement non linear data structures such as trees and graphs.", "bloom": "K3"},
+        {"co": "CO4", "statement": "Select appropriate searching and sorting algorithms to be used in specific circumstances.", "bloom": "K3"}
+      ],
+      "examPattern": {
+        "durationHours": 2.5,
+        "maxMarks": 60,
+        "cieMarks": 40,
+        "cieBreakdown": {"Attendance": 5, "Assignment/ Microproject": 15, "Internal Examination-1 (Written)": 10, "Internal Examination-2 (Written)": 10, "Total": 40},
+        "parts": [
+          {"name": "Part A", "questions": 8, "marksPerQuestion": 3, "totalMarks": 24, "choice": "All questions need to be answered", "coverage": "2 questions from each module"},
+          {"name": "Part B", "questions": 4, "marksPerQuestion": 9, "totalMarks": 36, "choice": "Two questions from each module, out of which 1 full question should be answered", "coverage": "1 answered question per module", "maxSubDivisions": 3}
+        ]
+      },
+      "sourceUrl": "https://ktu.notesundo.in/api/download/MqcvzosU"
+    },
+    {
+      "code": "PCECT302",
+      "title": "Solid State Devices",
+      "semester": 3,
+      "branch": "ECE",
+      "credits": {"L": 3, "T": 1, "P": 0, "C": 4},
+      "courseType": "Theory (Course Type PC, Course Category PC - Programme Core)",
+      "modules": [
+        {
+          "no": 1,
+          "title": "Semiconductor Physics and Carrier Transport",
+          "topics": [
+            "Review of Semiconductor physics: Equilibrium and steady state conditions",
+            "Concept of effective mass and Fermi level",
+            "Density of states & Effective density of states",
+            "Equilibrium concentration of electrons and holes",
+            "Excess carriers in semiconductors: Generation and recombination mechanisms of excess carriers, quasi-Fermi levels",
+            "Carrier transport in semiconductors : Drift, conductivity and mobility, variation of mobility with temperature and doping, Hall Effect",
+            "Diffusion, Einstein relations, Poisson equations, Continuity equations, Current flow equations, Diffusion length, Gradient of quasi-Fermi level"
+          ],
+          "hours": 13
+        },
+        {
+          "no": 2,
+          "title": "PN Junctions and Bipolar Junction Transistor",
+          "topics": [
+            "PN junctions : Contact potential, Electrical Field, Potential and Charge distribution at the junction",
+            "Biasing and Energy band diagrams, Ideal diode equation",
+            "Bipolar junction transistor : Transistor action, Base width modulation",
+            "Current components in a BJT, Derivation of current components"
+          ],
+          "hours": 12
+        },
+        {
+          "no": 3,
+          "title": "Metal Semiconductor Contacts and MOS/MOSFET",
+          "topics": [
+            "Metal Semiconductor contacts : Electron affinity and work function, Ohmic and Rectifying Contacts, current voltage characteristics",
+            "Ideal MOS capacitor : band diagrams at equilibrium, accumulation, depletion and inversion, surface potential, CV characteristics, effects of real surfaces, threshold voltage, body effect",
+            "MOSFET - Drain current equation of enhancement type MOSFET (derivation) - linear and saturation region, Drain characteristics, transfer characteristics"
+          ],
+          "hours": 11
+        },
+        {
+          "no": 4,
+          "title": "MOSFET Scaling, Short Channel Effects and FinFET",
+          "topics": [
+            "MOSFET scaling : Need for scaling, constant voltage scaling and constant field scaling",
+            "Sub-threshold conduction in MOS",
+            "Short channel effects in MOSFETs : Channel length modulation, Drain Induced Barrier Lowering, Velocity Saturation, Threshold Voltage Variations and Hot Carrier Effects",
+            "MESFET and FinFET : Structure, operation and advantages"
+          ],
+          "hours": 8
+        }
+      ],
+      "courseOutcomes": [
+        {"co": "CO1", "statement": "Apply Fermi-Dirac statistics to compare equilibrium carrier concentration.", "bloom": "K3"},
+        {"co": "CO2", "statement": "State different carrier transport mechanisms in extrinsic semiconductors and obtain the current densities due to this transport.", "bloom": "K3"},
+        {"co": "CO3", "statement": "Apply the concept of semiconductor physics to solve the current components in semiconductor devices.", "bloom": "K3"},
+        {"co": "CO4", "statement": "Analyze the response of semiconductor devices for different biasing conditions", "bloom": "K3"},
+        {"co": "CO5", "statement": "Outline the effects of scaling in semiconductor devices.", "bloom": "K2"}
+      ],
+      "examPattern": {
+        "durationHours": 2.5,
+        "maxMarks": 60,
+        "cieMarks": 40,
+        "cieBreakdown": {"Attendance": 5, "Assignment/ Microproject": 15, "Internal Examination-1 (Written)": 10, "Internal Examination-2 (Written)": 10, "Total": 40},
+        "parts": [
+          {"name": "Part A", "questions": 8, "marksPerQuestion": 3, "totalMarks": 24, "choice": "All questions need to be answered", "coverage": "2 questions from each module"},
+          {"name": "Part B", "questions": 4, "marksPerQuestion": 9, "totalMarks": 36, "choice": "Two questions from each module, out of which 1 full question should be answered", "coverage": "1 answered question per module", "maxSubDivisions": 3}
+        ]
+      },
+      "sourceUrl": "https://ktu.notesundo.in/api/download/BCq1DLg7"
+    },
+    {
+      "code": "UCHUT346",
+      "title": "Economics for Engineers",
+      "semester": 3,
+      "branch": "Common",
+      "credits": {"L": 2, "T": 0, "P": 0, "C": 2},
+      "courseType": "Theory (Course Type HMC, Course Category UC - University Core); offered in both S3 and S4",
+      "modules": [
+        {
+          "no": 1,
+          "title": "Basic Economic Problems and Demand/Supply",
+          "topics": [
+            "Basic economic problems - Production Possibility Curve",
+            "Utility - Law of diminishing marginal utility",
+            "Demand: Factors determining demand - Law of Demand - Demand curve",
+            "Price elasticity of demand - measurement of price elasticity and its applications",
+            "Supply: factors determining supply - Law of supply - Supply curve",
+            "Equilibrium price determination - Changes in demand and supply and its effects on equilibrium price and quantity",
+            "Production: Production function - Law of variable proportion - Returns to scale - Cobb-Douglas Production Function"
+          ],
+          "hours": 6
+        },
+        {
+          "no": 2,
+          "title": "Cost, Revenue and Market Structures",
+          "topics": [
+            "Cost: Cost concepts - Private cost and social cost - Sunk cost - Opportunity cost - Explicit and implicit cost",
+            "Short run cost curves - Long run average cost curve",
+            "Revenue concepts - Break-even point",
+            "Market: Perfect Competition - Monopoly - Monopolistic Competition (features and equilibrium of a firm)",
+            "Oligopoly - Features - Kinked demand model"
+          ],
+          "hours": 6
+        },
+        {
+          "no": 3,
+          "title": "National Income and Inflation",
+          "topics": [
+            "National income: Concepts (GDP, GNP and NNP) - Final goods and Intermediate goods",
+            "Methods of Estimation - output method - expenditure method",
+            "Difficulties in the measurement of national income",
+            "Inflation: Causes and Effects - Measures to Control Inflation",
+            "Monetary and Fiscal policies - Repo and reverse repo rate"
+          ],
+          "hours": 6
+        },
+        {
+          "no": 4,
+          "title": "Value Analysis, Value Engineering and Capital Budgeting",
+          "topics": [
+            "Value Analysis and value Engineering: Cost Value, Exchange Value, Use Value, Esteem Value",
+            "Aims, Advantages and Application areas of Value Engineering - Value Engineering Procedure",
+            "Capital Budgeting: Time value of money",
+            "Net Present Value Method - Benefit Cost Ratio - Internal Rate of Return - Payback - Accounting Rate of Return"
+          ],
+          "hours": 6
+        }
+      ],
+      "courseOutcomes": [
+        {"co": "CO1", "statement": "Understand the fundamentals of various economic issues using laws and learn the concepts of demand, supply, elasticity and production function.", "bloom": "K2"},
+        {"co": "CO2", "statement": "Develop decision making capability by applying concepts relating to costs and revenue, and acquire knowledge regarding the functioning of firms in different market situations.", "bloom": "K3"},
+        {"co": "CO3", "statement": "Outline the macroeconomic principles of monetary and fiscal systems and national income.", "bloom": "K2"},
+        {"co": "CO4", "statement": "Make use of the possibilities of value analysis and engineering, and take investment decisions through capital budgeting techniques.", "bloom": "K3"}
+      ],
+      "examPattern": {
+        "durationHours": 2.5,
+        "maxMarks": 50,
+        "cieMarks": 50,
+        "cieBreakdown": {"Attendance": 10, "Assignment/Case Study/ Microproject": 15, "Internal Examination-1 (Written)": 12.5, "Internal Examination-2 (Written)": 12.5, "Total": 50},
+        "parts": [
+          {"name": "Part A", "questions": 6, "marksPerQuestion": 3, "totalMarks": 18, "choice": "All questions need to be answered", "coverage": "Minimum 1 and Maximum 2 Questions from each module"},
+          {"name": "Part B", "questions": 4, "marksPerQuestion": 8, "totalMarks": 32, "choice": "2 questions will be given from each module, out of which 1 question should be answered", "coverage": "1 answered question per module", "maxSubDivisions": 2}
+        ]
+      },
+      "sourceUrl": "https://ktu.notesundo.in/api/download/YTsqXxPx"
+    }
+  ]
+}

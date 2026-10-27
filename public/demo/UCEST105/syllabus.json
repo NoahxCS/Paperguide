@@ -1,0 +1,367 @@
+{
+  "courseCode": "UCEST105",
+  "courseTitle": "Algorithmic Thinking with Python",
+  "scheme": "KTU 2024",
+  "semester": "1",
+  "branch": "Common",
+  "courseType": "Theory (Course Type ESC, Course Category UC - University Core); common to all branches; offered in S1 or S2",
+  "credits": {
+    "l": 3,
+    "t": 0,
+    "p": 2,
+    "r": null,
+    "credits": 4
+  },
+  "assessment": {
+    "cieMarks": 40,
+    "eseMarks": 60,
+    "eseDurationMinutes": 150,
+    "cieBreakdown": {
+      "Attendance": 5,
+      "Continuous Assessment (Accurate Execution of Programming Tasks)": 5,
+      "Internal Examination-1 (Written)": 10,
+      "Internal Examination-2 (Written)": 10,
+      "Internal Examination-3 (Lab Examination)": 10,
+      "Total": 40
+    }
+  },
+  "modules": [
+    {
+      "number": 1,
+      "title": "Problem-Solving Strategies; The Problem-Solving Process; Essentials of Python Programming",
+      "hours": 7,
+      "topics": [
+        {
+          "id": "1.1",
+          "text": "PROBLEM-SOLVING STRATEGIES"
+        },
+        {
+          "id": "1.2",
+          "text": "Problem-solving strategies defined"
+        },
+        {
+          "id": "1.3",
+          "text": "Importance of understanding multiple problem-solving strategies"
+        },
+        {
+          "id": "1.4",
+          "text": "Trial and Error"
+        },
+        {
+          "id": "1.5",
+          "text": "Heuristics"
+        },
+        {
+          "id": "1.6",
+          "text": "Means-Ends Analysis"
+        },
+        {
+          "id": "1.7",
+          "text": "Backtracking (Working backward)"
+        },
+        {
+          "id": "1.8",
+          "text": "THE PROBLEM-SOLVING PROCESS"
+        },
+        {
+          "id": "1.9",
+          "text": "Computer as a model of computation"
+        },
+        {
+          "id": "1.10",
+          "text": "Understanding the problem"
+        },
+        {
+          "id": "1.11",
+          "text": "Formulating a model"
+        },
+        {
+          "id": "1.12",
+          "text": "Developing an algorithm"
+        },
+        {
+          "id": "1.13",
+          "text": "Writing the program"
+        },
+        {
+          "id": "1.14",
+          "text": "Testing the program"
+        },
+        {
+          "id": "1.15",
+          "text": "Evaluating the solution"
+        },
+        {
+          "id": "1.16",
+          "text": "ESSENTIALS OF PYTHON PROGRAMMING"
+        },
+        {
+          "id": "1.17",
+          "text": "Creating and using variables in Python"
+        },
+        {
+          "id": "1.18",
+          "text": "Numeric and String data types in Python"
+        },
+        {
+          "id": "1.19",
+          "text": "Using the math module"
+        },
+        {
+          "id": "1.20",
+          "text": "Using the Python Standard Library for handling basic I/O - print, input"
+        },
+        {
+          "id": "1.21",
+          "text": "Python operators and their precedence"
+        }
+      ],
+      "cos": []
+    },
+    {
+      "number": 2,
+      "title": "Algorithm and Pseudocode Representation; Flowcharts",
+      "hours": 9,
+      "topics": [
+        {
+          "id": "2.1",
+          "text": "ALGORITHM AND PSEUDOCODE REPRESENTATION"
+        },
+        {
+          "id": "2.2",
+          "text": "Meaning and Definition of Pseudocode"
+        },
+        {
+          "id": "2.3",
+          "text": "Reasons for using pseudocode"
+        },
+        {
+          "id": "2.4",
+          "text": "The main constructs of pseudocode - Sequencing, selection (if-else structure, case structure) and repetition (for, while, repeat-until loops)"
+        },
+        {
+          "id": "2.5",
+          "text": "Sample problems (find simple interest, determine the larger of two numbers, factorial of a number, largest of n numbers, and others)"
+        },
+        {
+          "id": "2.6",
+          "text": "FLOWCHARTS"
+        },
+        {
+          "id": "2.7",
+          "text": "Symbols used in creating a Flowchart - start and end, arithmetic calculations, input/output operation, decision (selection), module name (call), for loop (Hexagon), flow-lines, on-page connector, off-page connector"
+        },
+        {
+          "id": "2.8",
+          "text": "Only for visualizing the control flow of Algorithms; the use of tools like RAPTOR is suggested"
+        }
+      ],
+      "cos": []
+    },
+    {
+      "number": 3,
+      "title": "Selection and Iteration Using Python; Decomposition and Modularization; Recursion",
+      "hours": 10,
+      "topics": [
+        {
+          "id": "3.1",
+          "text": "SELECTION AND ITERATION USING PYTHON:- if-else, elif, for loop, range, while loop"
+        },
+        {
+          "id": "3.2",
+          "text": "Sequence data types in Python - list, tuple, set, strings, dictionary"
+        },
+        {
+          "id": "3.3",
+          "text": "Creating and using Arrays in Python (using Numpy library)"
+        },
+        {
+          "id": "3.4",
+          "text": "DECOMPOSITION AND MODULARIZATION"
+        },
+        {
+          "id": "3.5",
+          "text": "Problem decomposition as a strategy for solving complex problems"
+        },
+        {
+          "id": "3.6",
+          "text": "Modularization"
+        },
+        {
+          "id": "3.7",
+          "text": "Motivation for modularization"
+        },
+        {
+          "id": "3.8",
+          "text": "Defining and using functions in Python"
+        },
+        {
+          "id": "3.9",
+          "text": "Functions with multiple return values"
+        },
+        {
+          "id": "3.10",
+          "text": "RECURSION"
+        },
+        {
+          "id": "3.11",
+          "text": "Recursion Defined"
+        },
+        {
+          "id": "3.12",
+          "text": "Reasons for using Recursion"
+        },
+        {
+          "id": "3.13",
+          "text": "The Call Stack"
+        },
+        {
+          "id": "3.14",
+          "text": "Recursion and the Stack"
+        },
+        {
+          "id": "3.15",
+          "text": "Avoiding Circularity in Recursion"
+        },
+        {
+          "id": "3.16",
+          "text": "Sample problems - Finding the nth Fibonacci number, greatest common divisor of two positive integers, the factorial of a positive integer, adding two positive integers, the sum of digits of a positive number"
+        }
+      ],
+      "cos": []
+    },
+    {
+      "number": 4,
+      "title": "Computational Approaches to Problem-Solving",
+      "hours": 10,
+      "topics": [
+        {
+          "id": "4.1",
+          "text": "Brute-force Approach - Example: Padlock, Password guessing"
+        },
+        {
+          "id": "4.2",
+          "text": "Divide-and-conquer Approach - Example: The Merge Sort Algorithm"
+        },
+        {
+          "id": "4.3",
+          "text": "Advantages of Divide and Conquer Approach"
+        },
+        {
+          "id": "4.4",
+          "text": "Disadvantages of Divide and Conquer Approach"
+        },
+        {
+          "id": "4.5",
+          "text": "Dynamic Programming Approach - Example: Fibonacci series"
+        },
+        {
+          "id": "4.6",
+          "text": "Recursion vs Dynamic Programming"
+        },
+        {
+          "id": "4.7",
+          "text": "Greedy Algorithm Approach - Example: given an array of positive integers each indicating the completion time for a task, find the maximum number of tasks that can be completed in the limited amount of time that you have"
+        },
+        {
+          "id": "4.8",
+          "text": "Motivations for the Greedy Approach"
+        },
+        {
+          "id": "4.9",
+          "text": "Characteristics of the Greedy Algorithm"
+        },
+        {
+          "id": "4.10",
+          "text": "Greedy Algorithms vs Dynamic Programming"
+        },
+        {
+          "id": "4.11",
+          "text": "Randomized Approach - Example 1: coupon collector (jeans coupons); Example 2: hat-check problem"
+        },
+        {
+          "id": "4.12",
+          "text": "Motivations for the Randomized Approach"
+        },
+        {
+          "id": "4.13",
+          "text": "Introductory diagrammatic/algorithmic explanations only; Analysis not required"
+        }
+      ],
+      "cos": []
+    }
+  ],
+  "courseOutcomes": [
+    {
+      "id": "CO1",
+      "statement": "Utilize computing as a model for solving real-world problems.",
+      "bloom": "K2",
+      "bloomRaw": "K2",
+      "mapsTo": []
+    },
+    {
+      "id": "CO2",
+      "statement": "Articulate a problem before attempting to solve it and prepare a clear and accurate model to represent the problem.",
+      "bloom": "K3",
+      "bloomRaw": "K3",
+      "mapsTo": []
+    },
+    {
+      "id": "CO3",
+      "statement": "Utilize effective algorithms to solve the formulated models and translate algorithms into executable programs.",
+      "bloom": "K3",
+      "bloomRaw": "K3",
+      "mapsTo": []
+    },
+    {
+      "id": "CO4",
+      "statement": "Interpret the problem-solving strategies, a systematic approach to solving computational problems, and essential Python programming skills",
+      "bloom": "K3",
+      "bloomRaw": "K3",
+      "mapsTo": []
+    }
+  ],
+  "paperPattern": [
+    {
+      "name": "Part A",
+      "instructions": "All questions need to be answered",
+      "questionCount": 8,
+      "marksPerQuestion": 3,
+      "totalMarks": 24,
+      "choice": "none",
+      "coversModules": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "questionsPerModule": null,
+      "coverageNote": "2 questions from each module",
+      "maxSubDivisions": null
+    },
+    {
+      "name": "Part B",
+      "instructions": "Two questions from each module, out of which 1 full question should be answered",
+      "questionCount": 4,
+      "marksPerQuestion": 9,
+      "totalMarks": 36,
+      "choice": "either-or",
+      "coversModules": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "questionsPerModule": null,
+      "coverageNote": "1 answered question per module",
+      "maxSubDivisions": 3
+    }
+  ],
+  "paperPatternNote": "From the ESE block of this course's 2024-scheme syllabus: 60 marks, 2.5 h.",
+  "patternSource": "syllabus",
+  "notFound": [],
+  "sourceUrl": "https://ktu.notesundo.in/api/download/pmh2Mu24",
+  "sourceKind": "bundled-index",
+  "origin": "bundled-index",
+  "verified": true
+}

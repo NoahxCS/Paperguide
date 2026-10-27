@@ -1,0 +1,18 @@
+{
+  "name": "paperguide",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Paperguide - exam paper quality checker for KTU-affiliated colleges (2024 scheme).",
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node --watch server.mjs",
+    "test": "node test/run-all.mjs",
+    "test:node": "node --test test/",
+    "build:demo": "node scripts/build-demo.mjs",
+    "check:ocr": "node scripts/check-ocr.mjs"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}

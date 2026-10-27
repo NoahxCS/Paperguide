@@ -1,0 +1,356 @@
+{
+  "courseCode": "UCEST105",
+  "courseTitle": "ALGORITHMIC THINKING WITH PYTHON",
+  "examLabel": "First Semester B.Tech Degree Regular Examination December 2024 (2024 Scheme)",
+  "totalMarksPrinted": 60,
+  "durationMinutes": 150,
+  "parts": [
+    {
+      "name": "Part A",
+      "instructions": "Answer all questions. Each question carries 3 marks.",
+      "questionCount": 8,
+      "marksPerQuestion": 3,
+      "totalMarks": 24,
+      "choice": "none",
+      "coversModules": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "name": "Part B",
+      "instructions": "Answer any one full question from each module, each question carries 9 marks.",
+      "questionCount": 8,
+      "marksPerQuestion": 9,
+      "totalMarks": 36,
+      "choice": "either-or",
+      "coversModules": [
+        1,
+        2,
+        3,
+        4
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "A1",
+      "part": "Part A",
+      "label": "1",
+      "text": "You are asked to solve a jigsaw puzzle without a reference picture. How will you solve it using trial and error method?",
+      "marks": 3,
+      "marksSource": "printed",
+      "subParts": [],
+      "choiceGroup": "",
+      "moduleLabel": "",
+      "printedCo": "CO-1",
+      "hasFigure": false,
+      "notes": ""
+    },
+    {
+      "id": "A2",
+      "part": "Part A",
+      "label": "2",
+      "text": "Given the input \"1234 5\", write a Python code snippet to check if it is numeric.",
+      "marks": 3,
+      "marksSource": "printed",
+      "subParts": [],
+      "choiceGroup": "",
+      "moduleLabel": "",
+      "printedCo": "CO-1",
+      "hasFigure": false,
+      "notes": ""
+    },
+    {
+      "id": "A3",
+      "part": "Part A",
+      "label": "3",
+      "text": "Draw the flowchart to generate the first 'n' numbers in the Fibonacci sequence.",
+      "marks": 3,
+      "marksSource": "printed",
+      "subParts": [],
+      "choiceGroup": "",
+      "moduleLabel": "",
+      "printedCo": "CO-2",
+      "hasFigure": false,
+      "notes": ""
+    },
+    {
+      "id": "A4",
+      "part": "Part A",
+      "label": "4",
+      "text": "Write an algorithm to check whether the input integer is Palindrome or not.",
+      "marks": 3,
+      "marksSource": "printed",
+      "subParts": [],
+      "choiceGroup": "",
+      "moduleLabel": "",
+      "printedCo": "CO-2",
+      "hasFigure": false,
+      "notes": ""
+    },
+    {
+      "id": "A5",
+      "part": "Part A",
+      "label": "5",
+      "text": "Write the output produced by the following code. (i) for count in range(-10,-20,-2): print(count, end=\" \") (ii) for i in range(10,-1,-2): print(i) (iii) 2*3**2**2",
+      "marks": 3,
+      "marksSource": "printed",
+      "subParts": [],
+      "choiceGroup": "",
+      "moduleLabel": "",
+      "printedCo": "CO-3",
+      "hasFigure": false,
+      "notes": ""
+    },
+    {
+      "id": "A6",
+      "part": "Part A",
+      "label": "6",
+      "text": "Write a Python program to find the sum of even numbers from N given numbers.",
+      "marks": 3,
+      "marksSource": "printed",
+      "subParts": [],
+      "choiceGroup": "",
+      "moduleLabel": "",
+      "printedCo": "CO-3",
+      "hasFigure": false,
+      "notes": ""
+    },
+    {
+      "id": "A7",
+      "part": "Part A",
+      "label": "7",
+      "text": "What is the motivation for using a randomized approach in problem-solving?",
+      "marks": 3,
+      "marksSource": "printed",
+      "subParts": [],
+      "choiceGroup": "",
+      "moduleLabel": "",
+      "printedCo": "CO-4",
+      "hasFigure": false,
+      "notes": ""
+    },
+    {
+      "id": "A8",
+      "part": "Part A",
+      "label": "8",
+      "text": "You are a software engineer working on a security application for a company that handles sensitive user data. The application has a 4-digit numeric password system for authentication. However, due to a system error, a user has forgotten their password. Write an algorithm for recovering the 4-digit numeric password.",
+      "marks": 3,
+      "marksSource": "printed",
+      "subParts": [],
+      "choiceGroup": "",
+      "moduleLabel": "",
+      "printedCo": "CO-4",
+      "hasFigure": false,
+      "notes": ""
+    },
+    {
+      "id": "B9",
+      "part": "Part B",
+      "label": "9",
+      "text": "a) Explain how backtracking strategy can be applied to solve Sudoku problem? b) Your college is located in a metropolitan city and you are new to that city. You would like to go out for dinner with your friends. Explain how heuristics approach can be used to find the best restaurant for dinner.",
+      "marks": 9,
+      "marksSource": "printed",
+      "subParts": [
+        {
+          "label": "a",
+          "text": "Explain how backtracking strategy can be applied to solve Sudoku problem?",
+          "marks": 5
+        },
+        {
+          "label": "b",
+          "text": "Your college is located in a metropolitan city and you are new to that city. You would like to go out for dinner with your friends. Explain how heuristics approach can be used to find the best restaurant for dinner.",
+          "marks": 4
+        }
+      ],
+      "choiceGroup": "B-m1",
+      "moduleLabel": "Module -1",
+      "printedCo": "CO-1",
+      "hasFigure": false,
+      "notes": ""
+    },
+    {
+      "id": "B10",
+      "part": "Part B",
+      "label": "10",
+      "text": "a) You are asked to develop new campus management software for your college. How will you apply Means-Ends Analysis to develop the software? b) Given the area of a circle. Write a Python program to calculate the radius of the circle using the math module.",
+      "marks": 9,
+      "marksSource": "printed",
+      "subParts": [
+        {
+          "label": "a",
+          "text": "You are asked to develop new campus management software for your college. How will you apply Means-Ends Analysis to develop the software?",
+          "marks": 6
+        },
+        {
+          "label": "b",
+          "text": "Given the area of a circle. Write a Python program to calculate the radius of the circle using the math module.",
+          "marks": 3
+        }
+      ],
+      "choiceGroup": "B-m1",
+      "moduleLabel": "Module -1",
+      "printedCo": "CO-1",
+      "hasFigure": false,
+      "notes": ""
+    },
+    {
+      "id": "B11",
+      "part": "Part B",
+      "label": "11",
+      "text": "a) Write a pseudocode to implement a grading system based on the following conditions. Marks >= 90: Grade A; Marks 80-89: Grade B; Marks 70-79: Grade C; Marks 60-70: Grade D; Marks 50-69: Grade E; Marks <50: Grade F. If the difference between the marks and the next multiple of 10 is less that 3, then convert it to next grade. If the marks are below 50, no need to convert even if the difference is less than 3. b) You are a software developer working on a data analysis tool for a logistics company. The company has a list of delivery times... identify delivery times that are divisible by 6 but not divisible by 4. Write an algorithm to print the delivery times that are divisible by 6 but not divisible by 4 from a given set of delivery times.",
+      "marks": 9,
+      "marksSource": "printed",
+      "subParts": [
+        {
+          "label": "a",
+          "text": "Write a pseudocode to implement a grading system based on the stated grade bands and the \"next multiple of 10\" conversion rule.",
+          "marks": 6
+        },
+        {
+          "label": "b",
+          "text": "Write an algorithm to print the delivery times that are divisible by 6 but not divisible by 4 from a given set of delivery times.",
+          "marks": 3
+        }
+      ],
+      "choiceGroup": "B-m2",
+      "moduleLabel": "Module -2",
+      "printedCo": "CO-2",
+      "hasFigure": false,
+      "notes": "Sub-part b) carries no CO tag in the printed paper; CO2 is taken from the module."
+    },
+    {
+      "id": "B12",
+      "part": "Part B",
+      "label": "12",
+      "text": "a) You are developing a feature for a business analytics tool that processes a list of sales figures for a company. As part of the analytics, the tool must identify the highest and lowest sales figures from the provided data. Write the pseudocode to determine the largest and smallest numbers in a given list of N numbers, ensuring the solution is efficient for real-world applications. b) Write the pseudocode to calculate the factorial of a given number using a for loop.",
+      "marks": 9,
+      "marksSource": "printed",
+      "subParts": [
+        {
+          "label": "a",
+          "text": "Write the pseudocode to determine the largest and smallest numbers in a given list of N numbers, ensuring the solution is efficient for real-world applications.",
+          "marks": 6
+        },
+        {
+          "label": "b",
+          "text": "Write the pseudocode to calculate the factorial of a given number using a for loop.",
+          "marks": 3
+        }
+      ],
+      "choiceGroup": "B-m2",
+      "moduleLabel": "Module -2",
+      "printedCo": "CO-2",
+      "hasFigure": false,
+      "notes": ""
+    },
+    {
+      "id": "B13",
+      "part": "Part B",
+      "label": "13",
+      "text": "a) You are working as a software engineer for a financial analysis company. The company uses Fibonacci sequences to model certain financial growth patterns. You are tasked with developing a tool that generates the first 'n' numbers in the Fibonacci sequence. You should use recursion to solve it. b) Write a program that accepts the length of three sides of a triangle as input and determine whether or not the triangle is a right triangle.",
+      "marks": 9,
+      "marksSource": "printed",
+      "subParts": [
+        {
+          "label": "a",
+          "text": "Develop a tool that generates the first 'n' numbers in the Fibonacci sequence using recursion.",
+          "marks": 5
+        },
+        {
+          "label": "b",
+          "text": "Write a program that accepts the length of three sides of a triangle as input and determine whether or not the triangle is a right triangle.",
+          "marks": 4
+        }
+      ],
+      "choiceGroup": "B-m3",
+      "moduleLabel": "Module -3",
+      "printedCo": "CO-3",
+      "hasFigure": false,
+      "notes": ""
+    },
+    {
+      "id": "B14",
+      "part": "Part B",
+      "label": "14",
+      "text": "a) You are given two positive integers, a and b. Write a Python program using recursion to find the Least Common Multiple (LCM) of these integers. You are not allowed to directly calculate the LCM formula, but must instead use the relationship between GCD and LCM. b) You are working on a text-processing application... all capital letters to appear first, followed by small letters, then digits, and finally any special characters. Write a Python program to implement this feature, ensuring the reorganized output is displayed as a single word.",
+      "marks": 9,
+      "marksSource": "printed",
+      "subParts": [
+        {
+          "label": "a",
+          "text": "Write a Python program using recursion to find the LCM of two positive integers, using the relationship between GCD and LCM rather than the direct LCM formula.",
+          "marks": 6
+        },
+        {
+          "label": "b",
+          "text": "Write a Python program that rearranges a sentence so that capital letters come first, then small letters, then digits, then special characters, printed as a single word.",
+          "marks": 3
+        }
+      ],
+      "choiceGroup": "B-m3",
+      "moduleLabel": "Module -3",
+      "printedCo": "CO-3",
+      "hasFigure": false,
+      "notes": ""
+    },
+    {
+      "id": "B15",
+      "part": "Part B",
+      "label": "15",
+      "text": "a) You are working as a financial analyst for a bank... develop an efficient algorithm using the Divide and Conquer approach to find the sum of the two smallest rates. Explain with a suitable example. b) Compare and contrast greedy approach and dynamic programming approach.",
+      "marks": 9,
+      "marksSource": "printed",
+      "subParts": [
+        {
+          "label": "a",
+          "text": "Develop an algorithm using the Divide and Conquer approach to find the sum of the two smallest rates in an array of positive integers. Explain with a suitable example.",
+          "marks": 6
+        },
+        {
+          "label": "b",
+          "text": "Compare and contrast greedy approach and dynamic programming approach.",
+          "marks": 3
+        }
+      ],
+      "choiceGroup": "B-m4",
+      "moduleLabel": "Module -4",
+      "printedCo": "CO-4",
+      "hasFigure": false,
+      "notes": ""
+    },
+    {
+      "id": "B16",
+      "part": "Part B",
+      "label": "16",
+      "text": "a) Explain memoization and tabulation techniques in dynamic programming for calculating the n-th Fibonacci number. b) Solve the following: ... Develop a greedy algorithm to determine the maximum number of tasks you can complete in a given total time limit. Explain your reasoning behind each step of the solution.",
+      "marks": 9,
+      "marksSource": "printed",
+      "subParts": [
+        {
+          "label": "a",
+          "text": "Explain memoization and tabulation techniques in dynamic programming for calculating the n-th Fibonacci number.",
+          "marks": 6
+        },
+        {
+          "label": "b",
+          "text": "Develop a greedy algorithm to determine the maximum number of tasks you can complete in a given total time limit. Explain your reasoning behind each step.",
+          "marks": 3
+        }
+      ],
+      "choiceGroup": "B-m4",
+      "moduleLabel": "Module -4",
+      "printedCo": "CO-4",
+      "hasFigure": false,
+      "notes": ""
+    }
+  ],
+  "totalMarksCounted": 60,
+  "warnings": [
+    "Part B prints 8 questions of 9 marks (72 marks) but only four are answered, so 60 is the answerable total. Either/or pairs are counted once throughout.",
+    "Question 11 b) carries no CO tag in the printed paper; CO2 is taken from its module."
+  ]
+}

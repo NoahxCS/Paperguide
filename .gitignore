@@ -1,0 +1,28 @@
+# Dependencies
+# Paperguide has none at runtime, but keep a stray install out of the repo.
+node_modules/
+
+# Scratch directories used by the verification and demo scripts
+.buildtmp*/
+.verify/
+.ocrcheck/
+
+# Local environment and secrets
+# Paperguide never persists API keys (they live in one tab's memory), but a
+# developer's own scratch file should never be committed.
+.env
+.env.*
+*.local
+
+# Logs and OS clutter
+*.log
+npm-debug.log*
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editors
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp

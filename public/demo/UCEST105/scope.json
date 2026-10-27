@@ -1,0 +1,51 @@
+{
+  "courseCode": "UCEST105",
+  "courseTitle": "Algorithmic Thinking with Python",
+  "examLabel": "First Semester B.Tech Degree Regular Examination December 2024 (2024 Scheme)",
+  "totalMarks": 60,
+  "durationMinutes": 150,
+  "modulesInScope": [
+    1,
+    2,
+    3
+  ],
+  "moduleScopeNotes": "The teacher declared Modules 1-3 examinable and Module 4 out of scope, so this demo can show the out-of-scope and uncovered-topic checks working on a real paper.",
+  "paperStructure": {
+    "source": "teacher",
+    "note": "Default for KTU 2024-scheme theory courses (from the ESE block of real syllabi and real papers: UCEST105, GAMAT101, PCCST302/303, PCECT302). Max. Marks 60, Duration 2 hours 30 minutes. (Confirmed by the teacher.)",
+    "parts": [
+      {
+        "name": "Part A",
+        "instructions": "Answer all questions. Each question carries 3 marks.",
+        "questionCount": 8,
+        "marksPerQuestion": 3,
+        "totalMarks": 24,
+        "choice": "none",
+        "coversModules": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "questionsPerModule": 2
+      },
+      {
+        "name": "Part B",
+        "instructions": "Answer any one full question from each module, each question carries 9 marks.",
+        "questionCount": 8,
+        "marksPerQuestion": 9,
+        "totalMarks": 36,
+        "choice": "either-or",
+        "coversModules": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "questionsPerModule": 2
+      }
+    ]
+  },
+  "classNote": "This batch is weak at recursion and at reading pseudocode for boundary conditions.",
+  "unresolved": []
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Paperguide &mdash; self test</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      body { overflow: auto; }
+      .wrap { max-width: 900px; margin: 0 auto; padding: 26px 20px 60px; }
+      .result { display: grid; grid-template-columns: 58px 1fr; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13.5px; }
+      .result .status { font-weight: 700; font-family: var(--mono); font-size: 12px; }
+      .pass .status { color: var(--ok); }
+      .fail .status { color: var(--danger); }
+      .detail { color: var(--text-muted); font-size: 12.5px; }
+      pre { background: var(--bg-sunken); border: 1px solid var(--border); border-radius: 8px; padding: 9px; overflow: auto; font-size: 12px; max-height: 220px; }
+      #summary { font-size: 19px; font-weight: 650; margin: 14px 0 20px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1 style="font-size: 22px; margin: 0 0 4px">Paperguide self test</h1>
+      <p class="muted" style="margin: 0">
+        Runs in a real browser against the running server. Checks that every module loads, every card renders, and the
+        bundled demo bundle is complete and internally consistent.
+      </p>
+      <div id="summary">Running&hellip;</div>
+      <div id="results"></div>
+    </div>
+    <script type="module" src="/selftest.js"></script>
+  </body>
+</html>

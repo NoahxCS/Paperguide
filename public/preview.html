@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paperguide &mdash; report preview</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <style>
+      html, body { height: auto; overflow: auto; }
+      body { background: var(--bg); }
+      .wrap { max-width: 1000px; margin: 0 auto; padding: 22px 20px 80px; }
+      .bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+      .bar h1 { font-size: 20px; margin: 0; font-weight: 650; }
+      .chat-inner { max-width: none; }
+      .msg + .msg { margin-top: 16px; }
+      #out .card + .card { margin-top: 14px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="bar">
+        <h1>Report preview</h1>
+        <span class="badge badge-scheme">KTU 2024</span>
+        <span class="badge badge-info">cached demo bundle</span>
+        <span style="flex: 1"></span>
+        <button class="btn btn-secondary" id="showA" type="button">Question Analysis</button>
+        <button class="btn btn-secondary" id="showB" type="button">Persona Prediction</button>
+        <button class="btn btn-ghost" id="toggleTheme" type="button">Toggle theme</button>
+      </div>
+      <p class="field-hint" style="margin-top: -8px">
+        Renders the bundled demo reports directly, without running the flow. Useful for reviewing the report layout, and
+        for checking the light and dark themes.
+      </p>
+      <div id="out" class="chat"><div class="chat-inner"></div></div>
+    </div>
+    <script type="module">
+      import { renderAnalysisReport, renderPersonaReport } from '/ui/report.js';
+      import { loadDemoBundle } from '/core/demo.js';
+
+      const out = document.querySelector('#out .chat-inner');
+      const bundle = await loadDemoBundle('UCEST105');
+
+      function show(which) {
+        out.innerHTML =
+          which === 'persona' ? renderPersonaReport(bundle.persona) : renderAnalysisReport(bundle.analysis);
+        window.scrollTo({ top: 0 });
+      }
+      document.getElementById('showA').addEventListener('click', () => show('analysis'));
+      document.getElementById('showB').addEventListener('click', () => show('persona'));
+      document.getElementById('toggleTheme').addEventListener('click', () => {
+        document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      });
+      document.documentElement.dataset.theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      show(new URLSearchParams(location.search).get('mode') ?? 'analysis');
+    </script>
+  </body>
+</html>
